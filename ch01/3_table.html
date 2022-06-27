@@ -4,21 +4,126 @@
 	<meta charset="UTF-8">
 	<meta name="viewpoint" content="width=device-width, inital-scale=1.0">
 	<title>3_table</title>
+	
+	<style type="text/css"> /* 테이블의 시각적인 효과 */
+		table, th, td{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		th, td{
+			padding: 10px;
+		}
+	</style>
 </head>
 
 <body>
 
-	<table>
+	<table width="100%">
 		<tr>
-			<td>번호</td>
-			<td>이름</td>
-			<td>아이디</td>
+			<td width="50px">번호</td>
+			<td>이름</td>						<!-- 창이 넓어질수록 빈자리가 늘어난다. -->
+			<td width="200px">아이디</td>
+			<td width="150px">주소</td>>
+			<td width="250px">상세주소</td>
+			<td width="150px">모바일</td>
 		</tr>
 		<tr>
 			<td>25</td>
 			<td>진휘재</td>
-			<td>wlsgnlwo@g</td>
+			<td>wlsgnlwo@gmail.com</td>
+			<td>서울시 송파구</td>
+			<td>백제고분로 28길 28-8 302호</td>
+			<td>010-2354-1567</td>
 		</tr>
+		<tr>
+			<td>13</td>
+			<td>휘재진</td>
+			<td>wls974@naver.com</td>
+			<td>경기도 구리시</td>
+			<td>토평동 평화아파트 1306호</td>
+			<td>010-1234-5678</td>
+		</tr>
+	</table>
+	
+	<br>
+	
+	<table>
+		<tr>
+			<td width="100px"></td>
+			<td width="100px"></td>
+			<td width="100px"></td>
+			<td width="100px"></td>
+		</tr>
+		
+		<tr>
+			<td width="100px"></td>
+			<td width="100px" colspan="2">here</td>
+			<!-- <td width="100px"></td> -->
+			<td width="100px"></td>
+		</tr>
+		
+		<tr>
+			<td width="100px"></td>
+			<td width="100px"></td>
+			<td width="100px"></td>
+			<td width="100px"></td>
+		</tr>
+		
+	</table>
+	
+	<br>
+	
+	<table>
+		<tr>
+			<td width="100px"></td>
+			<td width="100px"></td>
+			<td width="100px"></td>
+			<td width="100px"></td>
+		</tr>
+		
+		<tr>
+			<td width="100px"></td>
+			<td width="100px" rowspan="2">here</td>
+			<td width="100px"></td>
+			<td width="100px"></td>
+		</tr>
+		
+		<tr>
+			<td width="100px"></td>
+			<!-- <td width="100px"></td> -->
+			<td width="100px"></td>
+			<td width="100px"></td>
+		</tr>
+		
+	</table>
+	
+		<!-- 병합 -->
+	
+		<!-- <table width="100%">
+		<thead>									/*잘 안쓰는 태그 thead, tbody, tfoot*/
+			<tr>
+				<td width="50px">번호</td>
+				<td>이름</td>
+				<td width="300px">아이디</td>
+				<td width="200px">주소</td>>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>25</td>
+				<td>진휘재</td>
+				<td>wlsgnlwo@gmail.com</td>
+				<td>서울시 송파구</td>
+			</tr>
+			<tr>
+				<td>asdasdasdasdsadsadsadsa</td>
+				<td>asdddddddddddddddddddddddddddddddd</td>
+				<td>wasfkdkladjflakjndflkajfkdjlajdklajsdkljsad</td>
+				<td>경기도 하남시</td>
+			</tr>
+		</tbody>
+		<tfoot>
+		</tfoot> -->
 	</table>
 
 </body>
