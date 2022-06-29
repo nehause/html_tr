@@ -78,7 +78,8 @@
 					<input type="text" name="heademail" id="heademail">
 					@
 					<input type="text" name="taleemail" id="taleemail" value="">
-					<select name="selecttaleemail" id="selecttaleemail" onselect="change()">
+					<!-- <select name="selecttaleemail" id="selecttaleemail" onselect="change()"> -->
+					<select name="selecttaleemail" id="selecttaleemail">
 						<option value="">메일주소선택</option>
 						<option value="google.com">구글</option>
 						<option value="naver.com">네이버</option>
@@ -261,7 +262,8 @@
 					<input type="button" name="careeradd" value="추가" onclick="add();">					
 				</td>
 			</tr>
-			<caption style="text-align: center;">
+			<caption style="text-align: center; caption-side:bottom;">
+				<br>
 				<input type="button" name="savebutton" id="savebutton" value="저장" onclick="save();">
 				<input type="button" name="cancelbutton" id="cancelbutton" value="취소" onclick="cancel();">
 			</caption>
@@ -281,13 +283,16 @@
 				alert("삭제 기능은 현재 구현중입니다.")
 			}
 			function save() {
-				alert("내용이 저장되는척 합니다.");
+				alert("내용이 저장되는척 하고 다음 페이지로 넘어갑니다.");
 				document.getElementById("form").submit();
 			}
 			function cancel() {
-				alert("내용이 취소되는척 합니다.");
+				alert("내용이 취소되는척 하고 다음 페이지로 넘어갑니다.");
 				document.getElementById("form").submit();
 			}
+			/* function change() {
+				document.getElementById("taleemail").value = document.getElementById("selecttaleemail").value;
+			} */
 		</script>
 	</form>
 </body>
