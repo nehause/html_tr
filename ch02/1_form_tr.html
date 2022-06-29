@@ -78,7 +78,7 @@
 					<input type="text" name="heademail" id="heademail">
 					@
 					<input type="text" name="taleemail" id="taleemail" value="">
-					<select name="selecttaleemail">
+					<select name="selecttaleemail" id="selecttaleemail" onselect="change()">
 						<option value="">메일주소선택</option>
 						<option value="google.com">구글</option>
 						<option value="naver.com">네이버</option>
@@ -261,7 +261,12 @@
 					<input type="button" name="careeradd" value="추가" onclick="add();">					
 				</td>
 			</tr>
+			<caption style="text-align: center;">
+				<input type="button" name="savebutton" id="savebutton" value="저장" onclick="save();">
+				<input type="button" name="cancelbutton" id="cancelbutton" value="취소" onclick="cancel();">
+			</caption>
 		</table>
+		
 		<script type="text/javascript">
 			function overlap() {
 				alert("중복 확인 기능은 현재 구현중입니다.");
@@ -274,6 +279,14 @@
 			}
 			function delect() {
 				alert("삭제 기능은 현재 구현중입니다.")
+			}
+			function save() {
+				alert("내용이 저장되는척 합니다.");
+				document.getElementById("form").submit();
+			}
+			function cancel() {
+				alert("내용이 취소되는척 합니다.");
+				document.getElementById("form").submit();
 			}
 		</script>
 	</form>

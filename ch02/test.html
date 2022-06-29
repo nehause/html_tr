@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Sample</title>
+    </head>
+<body>
+   
+    <h3>이메일주소 넣기</h3>
+    <div class="form_inline">
+        <div class="form_group">
+            <label for="email1" class="ir_su">이메일 아이디</label>
+            <input type="text" id="email1" name="email1" class="ui_input">
+        </div>
+        <div class="email_form"> @ </div>
+        <div class="email_form">
+            <label for="email2" class="ir_su">이메일 주소</label>
+            <input type="text" id="email2" name="email2" class="ui_input">
+        </div>
+        <div class="email_form">
+            <label for="email3" class="ir_su">메일 선택</label>
+            <select id="email3" name="email3" title="이메일 주소 선택" class="ui_select">
+                <option value="">  이메일주소 직접입력  </option>
+                <option value="naver.com">naver.com</option>
+                <option value="nate.com">nate.com</option>
+                <option value="gmail.com">gmail.com</option>
+                <option value="yahoo.com">yahoo.com</option>
+                <option value="hanmail.net">hanmail.net</option>
+            </select>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $( "#email3" ).change(function(){
+            $("#email2").val( $("#email3").val() );
+        });
+    </script>
+
+</body>
+</html>
