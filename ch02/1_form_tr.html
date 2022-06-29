@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name = "viewport" content = "width = deivce-width , inital-scale=1.0">
 	<title>1_form_tr</title>
-		<style type="text/css"> /* 테이블의 시각적인 효과 */
+	<style type="text/css"> /* 테이블의 시각적인 효과 */
 		table {
 		    margin:auto; 
 		}
@@ -39,7 +39,7 @@
 				<td width="150px" style="background-color: gray; color: white; text-align: center;">아이디</td>
 				<td>
 					<input type="text" name="id" placeholder="아이디" id="id">
-					<input type="button" name="idoverlap" value="아이디중복확인" id="idoverlap" onclick="idoverlap();">
+					<input type="button" name="idoverlap" value="아이디중복확인" id="idover" onclick="overlap();">
 					<br><span style="color: brown;">아이디 제한은 현재 구현중입니다.</span>
 				</td>
 			</tr>
@@ -77,7 +77,7 @@
 				<td>
 					<input type="text" name="heademail" id="heademail">
 					@
-					<input type="text" name="taleemail" id="taleemail">
+					<input type="text" name="taleemail" id="taleemail" value="">
 					<select name="selecttaleemail">
 						<option value="">메일주소선택</option>
 						<option value="google.com">구글</option>
@@ -87,7 +87,7 @@
 						<option value="kakao.com">카카오</option>
 						<option value="">직접입력</option>
 					</select>
-					<input type="button" name="emailoverlap" value="중복확인" onclick="emailoverlap();">
+					<input type="button" name="emailoverlap" value="중복확인" onclick="overlap();">
 				</td>
 			</tr>
 			<tr>
@@ -121,15 +121,15 @@
 				<td width="150px" style="background-color: gray; color: white; text-align: center;">우편번호</td>
 				<td>
 					<input type="text" name="zipcode" id="zipcode">
-					<input type="button" name="zipcodesearch" value="검색하기" onclick="zipcodesearch();">
+					<input type="button" name="zipcodesearch" value="검색하기" onclick="search();">
 				</td>
 			</tr>
 			<tr>
 				<td width="150px" style="background-color: gray; color: white; text-align: center;">주소</td>
 				<td>
-					<input type="text" name="firstaddress" id="firstaddress">
+					<input type="text" name="firstaddress" id="firstaddress" size="97">
 					<br>
-					<input type="text" name="lastaddress" id="lastaddress">
+					<input type="text" name="lastaddress" id="lastaddress" size="97">
 				</td>
 			</tr>
 			<tr>
@@ -168,12 +168,12 @@
 			</tr>
 			<tr>
 				<td width="150px" style="background-color: gray; color: white; text-align: center;">대표작</td>
-				<td><input type="text" name="masterpiece" id="masterpiece"></td>
+				<td><input type="text" name="masterpiece" id="masterpiece" size="97"></td>
 			</tr>
 			<tr>
 				<td width="150px" style="background-color: gray; color: white; text-align: center;">수상내역</td>
 				<td>
-					<textarea rows="15" cols="85" name="awards"></textarea>
+					<textarea rows="15" cols="97" name="awards"></textarea>
 					<br>
 					<span style="color: brown;">여러 수상내역을 등록 시 콤마(,)로 구분하여 등록해 주시기 바랍니다.</span>
 				</td>
@@ -181,10 +181,11 @@
 			<tr>
 				<td width="150px" style="background-color: gray; color: white; text-align: center;">주요작품</td>
 				<td>	
-				<input type="text" name="storytitle" id="storytitle" placeholder="스토리 제목을 입력하세요">
-				<input type="text" name="storyrole" id="storyrole" placeholder="해당 스토리의 역할을 입력하세요">
+				<input type="text" name="storytitle" id="storytitle" placeholder="스토리 제목을 입력하세요" size="42">
+				<input type="text" name="storyrole" id="storyrole" placeholder="해당 스토리의 역할을 입력하세요" size="42">
+				<input type="button" name="story delect" id="storydelect" value="삭제" onclick="delect()">
 				<br>
-				<input type="button" name="addstory" value="추가" onclick="addstory();">
+				<input type="button" name="storyadd" id="storyadd" value="추가" onclick="add();">
 				<br>
 				<span style="color: brown;">
 					본인 참여 주요작품의 제목 및 역할에 대해 등록해 주시기 바랍니다.<br>
@@ -200,6 +201,7 @@
 				</td>					
 			</tr>
 		</table>
+		<br><br>
 		<table width="900px">
 			<caption style="text-align: left;"><b>■스토리 이용자 정보 입력</b></caption>
 			<tr>
@@ -255,14 +257,23 @@
 					<input type="date" name="endcareer" id="endcareer">
 					<input type="text" name="careername" id="careername" placeholder="사업내용을 입력해주세요">
 					<input type="text" name="responsibilities" id="responsibilities" placeholder="담당업무를 입력해주세요">
-					<input type="button" name="careerdelect" value="삭제" onclick="careerdelect();"><br>
-					<input type="button" name="careeradd" value="추가" onclick="careeradd();">					
+					<input type="button" name="careerdelect" value="삭제" onclick="delect();"><br>
+					<input type="button" name="careeradd" value="추가" onclick="add();">					
 				</td>
 			</tr>
 		</table>
 		<script type="text/javascript">
-			function idoverlap() {
-				alert("아이디 중복 확인 기능은 현재 구현중입니다.");
+			function overlap() {
+				alert("중복 확인 기능은 현재 구현중입니다.");
+			}
+			function search() {
+				alert("검색 기능은 현재 구현중입니다.");
+			}
+			function add() {
+				alert("추가 기능은 현재 구현중입니다.");
+			}
+			function delect() {
+				alert("삭제 기능은 현재 구현중입니다.")
 			}
 		</script>
 	</form>
