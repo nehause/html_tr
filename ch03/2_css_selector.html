@@ -3,9 +3,34 @@
 <head>
 	<meta charset="UTF-8"> <!-- 문자열을 utf-8로 인식함 -->
 	<meta name = "viewport" content = "width = deivce-width , inital-scale=1.0"> <!-- viewpoint로 너비를 장치에 맞추고 확대 배율은 디폴트 설정에 맞춘다. -->
-	<title>진휘재</title>
+	<title>2_css_selector</title>
+	<!-- 선택자 -->
+	<style type="text/css">
+	/* 태그 선택자 */
+	p {
+		font-size: 10px;
+		color: red;
+	}
+	
+	/* 아이디 선택자 */
+	#aaa {
+		font-size: 15px;
+		color: orange;
+	}
+	/* 클래스 선택자 */
+	
+	.bbb {
+		font-size: 20px;
+		color: yellow;
+	}
+	
+	</style>
 </head>
-
 <body>
+	<p>선택자 테스트용 문구입니다.</p>
+	<p id="aaa">선택자 테스트용 문구입니다.</p>
+	<p class="bbb">선택자 테스트용 문구입니다.</p>
+	<p class="bbb">클래스 선택자 테스트용 문구입니다.</p>
+	<p class="bbb">클래스용 선택자 테스트용 문구입니다.</p>	
 </body>
 </html>

@@ -3,9 +3,58 @@
 <head>
 	<meta charset="UTF-8"> <!-- 문자열을 utf-8로 인식함 -->
 	<meta name = "viewport" content = "width = deivce-width , inital-scale=1.0"> <!-- viewpoint로 너비를 장치에 맞추고 확대 배율은 디폴트 설정에 맞춘다. -->
-	<title>진휘재</title>
+	<title>3_css_selector2</title>
+	<style type="text/css">
+	 	h1, p, span, ul, il{
+	 		font-size: 20px;
+	 		color: pink;
+	 	}
+		ul, il{
+			color: blue;
+		}
+		table, th, td{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		th, td{
+			padding: 10px;
+		}
+		tr > td{
+			background-color: red;
+		}
+		/* 아이디 선택자 */	
+		#aaa, .bbb {
+			font-size: 15px;
+			color: orange;
+		}
+	</style>
 </head>
-
 <body>
+	<h1>h1 태그 테스트용</h1>
+	<p>p 태그 테스트용</p>
+	<span>span 태그 테스트용</span>
+	<ul>
+		<li>ul li 태그 테스트용
+		<li>테스트 구별용
+		<li>구별용 텍스트
+		<li>텍스트 인데요
+	</ul>
+	<table>
+		<tr>
+			<td>테이블</td>
+			<td>체크용</td>
+			<td>확인용</td>
+		</tr>
+		<tr>
+			<td>확인용</td>
+			<td>테이블</td>
+			<td>체크용</td>
+		</tr>
+	</table>
+	<p>선택자 테스트용 문구입니다.</p>
+	<p id="aaa">선택자 테스트용 문구입니다.</p>
+	<p class="bbb">선택자 테스트용 문구입니다.</p>
+	<p class="bbb">클래스 선택자 테스트용 문구입니다.</p>
+	<p class="bbb">클래스용 선택자 테스트용 문구입니다.</p>
 </body>
 </html>

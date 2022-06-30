@@ -4,17 +4,19 @@
 	<meta charset="UTF-8"> <!-- 문자열을 utf-8로 인식함 -->
 	<meta name = "viewport" content = "width = deivce-width , inital-scale=1.0"> <!-- viewpoint로 너비를 장치에 맞추고 확대 배율은 디폴트 설정에 맞춘다. -->
 	<title>1_css</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">
 	<style type="text/css">
 		p {
 			background-color: gray;
 			color: white;
 		}
 	</style>
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<!-- 스타일이 중첩될때는 가장 마지막 스타일이 적용된다. -->
+	<!-- 인라인 스타일이 존재할때는 인라인 스타일이 가장 우세하다. -->
 </head>
 <body>
 	<p style="background-color: brown; color: orange;"> 인라인 vs 내부 vs 외부 <p>
 	<p>내부 vs 외부</p>
-	<!-- 우선 순위는 인라인, 내부, 외부 수준이다. -->
+	<!-- 스타일 우선 순위는 인라인 스타일이 제일 먼저고 내부와 외부 스타일의 우선순위 차이는 순서 차이다. -->
 </body>
 </html>
