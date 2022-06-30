@@ -6,6 +6,7 @@
 	<title>1_form_tr</title>
 	<style type="text/css"> /* 테이블의 시각적인 효과 */
 		table {
+			width: 900px;
 		    margin:auto; 
 		}
 		table, th, td{
@@ -16,9 +17,11 @@
 		th, td{
 			padding: 10px;
 		}
-		
+		brown{
+			color: brown;
+		}
 		th{
-			width: "150px";
+			width: 170px;
 			color: white;
 			background: gray;
 			text-align: center;
@@ -28,18 +31,14 @@
 </head>
 <body>
 	<form method="get"action="./result.html" id="form">
-		<table width="900px">
+		<table>
 			<caption style="text-align: left;">
 				<h1><b>회원가입</b></h1>
 				<br><br>
 				<b>■기본정보</b>
 			</caption>
 			<tr>
-				<th>실험용</th>
-				<td>일단 실험용</td>
-			</tr>
-			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">이름</td>
+				<th>&#128504;이름</th>
 				<td>
 					<input type="text" name="name" placeholder="이름" id="name">
 					<br>
@@ -49,15 +48,16 @@
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">아이디</td>
+				<th>&#128504;아이디</th>
 				<td>
 					<input type="text" name="id" placeholder="아이디" id="id">
-					<input type="button" name="idoverlap" value="아이디중복확인" id="idover" onclick="overlap();">
-					<br><span style="color: brown;">아이디 제한은 현재 구현중입니다.</span>
+					<input type="button" name="idoverlap" value="&#128504;아이디중복확인" id="idover" onclick="overlap();">
+					<br>
+					<span style="color: brown;">아이디 중복 확인은 현재 구현중입니다.</span>
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">비밀번호</td>
+				<th>&#128504;비밀번호</th>
 				<td>
 					<input type="password" name="password" placeholder="패스워드" id="password">
 					<br>
@@ -68,13 +68,13 @@
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">비밀번호 확인</td>
+				<th>&#128504;비밀번호 확인</th>
 				<td>
 					<input type="password" name="passwordcheck" placeholder="패스워드 확인" id="passwordcheck">
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">생년월일/성별</td>
+				<th>&#128504;생년월일/성별</th>
 				<td>
 					<input type="date" name="birthday" id="birthday">
 					<input type="radio" name="gender">남자
@@ -86,7 +86,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">이메일</td>
+				<th>&#128504;이메일</th>
 				<td>
 					<input type="text" name="heademail" id="heademail">
 					@
@@ -101,11 +101,11 @@
 						<option value="kakao.com">카카오</option>
 						<option value="">직접입력</option>
 					</select>
-					<input type="button" name="emailoverlap" value="중복확인" onclick="overlap();">
+					<input type="button" name="emailoverlap" value="&#128504;중복확인" onclick="overlap();">
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">연락처</td>
+				<th>&#128504;연락처</th>
 				<td>
 					휴대전화
 					<select name="leftphonenumber">
@@ -132,105 +132,105 @@
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">우편번호</td>
+				<th>&#128504;우편번호</th>
 				<td>
 					<input type="text" name="zipcode" id="zipcode">
 					<input type="button" name="zipcodesearch" value="검색하기" onclick="search();">
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">주소</td>
+				<th>&#128504;주소</th>
 				<td>
-					<input type="text" name="firstaddress" id="firstaddress" size="97">
+					<input type="text" name="firstaddress" id="firstaddress" style="width: 100%">
 					<br>
-					<input type="text" name="lastaddress" id="lastaddress" size="97">
+					<input type="text" name="lastaddress" id="lastaddress" style="width: 100%">
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">정보수신 여부</td>
-				<td>
-				<b>서비스 및 이벤트 소식, 지원사업 및 행사 정보 안내 수신여부</b>
-				<br>
-				<b>Email수신</b>
-				<input type="radio" name="emailreceive">동의함
-				<input type="radio" name="emailreceive">동의하지 않음
-				<br>
-				<b>SMS수신</b>
-				<input type="radio" name="smsreceive">동의함
-				<input type="radio" name="smsreceive">동의하지 않음
+				<th>정보수신 여부</th>
+					<td>
+					<b>서비스 및 이벤트 소식, 지원사업 및 행사 정보 안내 수신여부</b>
+					<br>
+					<b>Email수신</b>
+					<input type="radio" name="emailreceive">동의함
+					<input type="radio" name="emailreceive">동의하지 않음
+					<br>
+					<b>SMS수신</b>
+					<input type="radio" name="smsreceive">동의함
+					<input type="radio" name="smsreceive">동의하지 않음
 				</td>
 			</tr>
 		</table>
 		<br><br>
-		<table width="900px">
+		<table>
 			<caption style="text-align: left"><b>■작가정보</b></caption>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">프로필 이미지</td>
+				<th>&#128504;프로필 이미지</th>
 				<td>
 					<input type="file" name="profileimage" value="파일선택">
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">필명</td>
+				<th>&#128504;필명</th>
 				<td>
-				<input type="text" name="penname" id="penname">
-				<br>
-				<span style="color: brown;">
-					필명이 없으신 분들은 실명을 등록해 주시기 바랍니다.(작가정보에 노출 될 이름 입니다.)
-				</span>
+					<input type="text" name="penname" id="penname">
+					<br>
+					<span style="color: brown;">
+						필명이 없으신 분들은 실명을 등록해 주시기 바랍니다.(작가정보에 노출 될 이름 입니다.)
+					</span>
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">대표작</td>
-				<td><input type="text" name="masterpiece" id="masterpiece" size="97"></td>
+				<th>대표작</th>
+				<td><input type="text" name="masterpiece" id="masterpiece" style="width: 100%"></td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">수상내역</td>
+				<th>수상내역</th>
 				<td>
-					<textarea rows="15" cols="97" name="awards"></textarea>
+					<textarea rows="15" style="width: 100%" name="awards"></textarea>
 					<br>
 					<span style="color: brown;">여러 수상내역을 등록 시 콤마(,)로 구분하여 등록해 주시기 바랍니다.</span>
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">주요작품</td>
+				<th>주요작품</th>
 				<td>	
-				<input type="text" name="storytitle" id="storytitle" placeholder="스토리 제목을 입력하세요" size="42">
-				<input type="text" name="storyrole" id="storyrole" placeholder="해당 스토리의 역할을 입력하세요" size="42">
-				<input type="button" name="story delect" id="storydelect" value="삭제" onclick="delect()">
-				<br>
-				<input type="button" name="storyadd" id="storyadd" value="추가" onclick="add();">
-				<br>
-				<span style="color: brown;">
-					본인 참여 주요작품의 제목 및 역할에 대해 등록해 주시기 바랍니다.<br>
-					(역할은 메인작가, 공동작가, 보조작가, 각색, 각본 등 본인 역할을 정확히 기재해주시기 바랍니다.)
-				</span>
+					<input type="text" name="storytitle" id="storytitle" placeholder="스토리 제목을 입력하세요" style="width: 45%">
+					<input type="text" name="storyrole" id="storyrole" placeholder="해당 스토리의 역할을 입력하세요" style="width: 45%">
+					<input type="button" name="story delect" id="storydelect" value="삭제" onclick="delect()">
+					<br>
+					<input type="button" name="storyadd" id="storyadd" value="추가" onclick="add();">
+					<br>
+					<span style="color: brown;">
+						본인 참여 주요작품의 제목 및 역할에 대해 등록해 주시기 바랍니다.<br>
+						(역할은 메인작가, 공동작가, 보조작가, 각색, 각본 등 본인 역할을 정확히 기재해주시기 바랍니다.)
+					</span>
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">작가정보공개설정</td>
+				<th>작가정보공개설정</th>
 				<td>
 					<input type="radio" name="information">공개
 					<input type="radio" name="information">비공개
 				</td>					
 			</tr>
-			<caption style="text-align: center; caption-side:bottom;">
+			<caption style="text-align: center; caption-side: bottom;">
 				<br>
 				<input type="button" name="savebutton" id="savebutton" value="저장" onclick="save();">
 				<input type="button" name="cancelbutton" id="cancelbutton" value="취소" onclick="cancel();">
 			</caption>
 		</table>
 		<br><br>
-		<table width="900px">
+		<table>
 			<caption style="text-align: left;"><b>■스토리 이용자 정보 입력</b></caption>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">소속(회사)</td>
+				<th>&#128504;소속(회사)</th>
 				<td>
 					<input type="text" name="belong" id="belong">
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">사업자등록번호</td>
+				<th>사업자등록번호</th>
 				<td>
 					<input type="text" name="leftcompanynumber" id="leftcompanynumber"> -
 					<input type="text" name="centercompanynumber" id="centercompanynumber"> -
@@ -238,13 +238,13 @@
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">사업자등록중(첨부)</td>
+				<th>&#128504;사업자등록중(첨부)</th>
 				<td>
 					<input type="file" name="businessregistration" id="businessregistration">
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">분야</td>
+				<th>&#128504;분야</th>
 				<td>
 					<input type="checkbox" name="field">영화
 					<input type="checkbox" name="field2">방송
@@ -257,7 +257,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">직종</td>
+				<th>&#128504;직종</th>
 				<td>
 					<input type="radio" name="occupation">제작자
 					<input type="radio" name="occupation">투자자
@@ -266,7 +266,7 @@
 						<input type="text" name="occupationetc" id="occupationetc">
 			</tr>
 			<tr>
-				<td width="150px" style="background-color: gray; color: white; text-align: center;">주요 경력</td>
+				<th>주요 경력</th>
 				<td>
 					주요경력사항을 등록해 주시기바랍니다.<br>
 					<span style="color: brown;">
@@ -281,7 +281,6 @@
 				</td>
 			</tr>
 		</table>
-		
 		<script type="text/javascript">
 			function overlap() {
 				alert("중복 확인 기능은 현재 구현중입니다.");
