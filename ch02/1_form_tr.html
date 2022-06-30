@@ -40,8 +40,7 @@
 			<tr>
 				<th>&#128504;이름</th>
 				<td>
-					<input type="text" name="name" placeholder="이름" id="name">
-					<br>
+					<input type="text" name="name" placeholder="이름" id="name"><br>
 					<span style="color: brown;">
 						본인인증이 필요할 수 있으므로, 실명으로 적어주시기 바랍니다.
 					</span>
@@ -51,16 +50,14 @@
 				<th>&#128504;아이디</th>
 				<td>
 					<input type="text" name="id" placeholder="아이디" id="id">
-					<input type="button" name="idoverlap" value="&#128504;아이디중복확인" id="idover" onclick="overlap();">
-					<br>
+					<input type="button" name="idoverlap" value="&#128504;아이디중복확인" id="idover" onclick="overlap();"><br>
 					<span style="color: brown;">아이디 중복 확인은 현재 구현중입니다.</span>
 				</td>
 			</tr>
 			<tr>
 				<th>&#128504;비밀번호</th>
 				<td>
-					<input type="password" name="password" placeholder="패스워드" id="password">
-					<br>
+					<input type="password" name="password" placeholder="패스워드" id="password"><br>
 					<span style="color: brown;">
 						비밀번호 제한은 현재로서는 없습니다.<br>
 						구현 준비중이오니 잠시만 기다려주십시요.
@@ -78,8 +75,7 @@
 				<td>
 					<input type="date" name="birthday" id="birthday">
 					<input type="radio" name="gender">남자
-					<input type="radio" name="gender">여자
-					<br>
+					<input type="radio" name="gender">여자<br>
 					<span style="color: brown;">
 						반드시 주민등록상 생년월일을 기입해주시기 바랍니다.
 					</span>
@@ -109,6 +105,7 @@
 				<td>
 					휴대전화
 					<select name="leftphonenumber">
+						<option value="">선택</option>
 						<option value="010">010</option>
 						<option value="011">011</option>
 						<option value="070">070</option>
@@ -120,6 +117,7 @@
 					<br>
 					일반전화
 					<select name="lefthomenumber">
+						<option value="">선택</option>
 						<option value="02">02</option>
 						<option value="031">031</option>
 						<option value="053">053</option>
@@ -149,12 +147,10 @@
 			<tr>
 				<th>정보수신 여부</th>
 					<td>
-					<b>서비스 및 이벤트 소식, 지원사업 및 행사 정보 안내 수신여부</b>
-					<br>
+					<b>서비스 및 이벤트 소식, 지원사업 및 행사 정보 안내 수신여부</b><br>
 					<b>Email수신</b>
 					<input type="radio" name="emailreceive">동의함
-					<input type="radio" name="emailreceive">동의하지 않음
-					<br>
+					<input type="radio" name="emailreceive">동의하지 않음<br>
 					<b>SMS수신</b>
 					<input type="radio" name="smsreceive">동의함
 					<input type="radio" name="smsreceive">동의하지 않음
@@ -173,8 +169,7 @@
 			<tr>
 				<th>&#128504;필명</th>
 				<td>
-					<input type="text" name="penname" id="penname">
-					<br>
+					<input type="text" name="penname" id="penname"><br>
 					<span style="color: brown;">
 						필명이 없으신 분들은 실명을 등록해 주시기 바랍니다.(작가정보에 노출 될 이름 입니다.)
 					</span>
@@ -187,20 +182,17 @@
 			<tr>
 				<th>수상내역</th>
 				<td>
-					<textarea rows="15" style="width: 100%" name="awards"></textarea>
-					<br>
+					<textarea rows="15" style="width: 100%" name="awards"></textarea><br>
 					<span style="color: brown;">여러 수상내역을 등록 시 콤마(,)로 구분하여 등록해 주시기 바랍니다.</span>
 				</td>
 			</tr>
 			<tr>
 				<th>주요작품</th>
 				<td>	
-					<input type="text" name="storytitle" id="storytitle" placeholder="스토리 제목을 입력하세요" style="width: 45%">
-					<input type="text" name="storyrole" id="storyrole" placeholder="해당 스토리의 역할을 입력하세요" style="width: 45%">
-					<input type="button" name="story delect" id="storydelect" value="삭제" onclick="delect()">
-					<br>
-					<input type="button" name="storyadd" id="storyadd" value="추가" onclick="add();">
-					<br>
+					<input type="text" name="storytitle" id="storytitle" placeholder="스토리 제목을 입력하세요" style="width: 44%">
+					<input type="text" name="storyrole" id="storyrole" placeholder="해당 스토리의 역할을 입력하세요" style="width: 44%">
+					<input type="button" name="story delect" id="storydelect" value="삭제" onclick="delect()"><br>
+					<input type="button" name="storyadd" id="storyadd" value="추가" onclick="add();"><br>
 					<span style="color: brown;">
 						본인 참여 주요작품의 제목 및 역할에 대해 등록해 주시기 바랍니다.<br>
 						(역할은 메인작가, 공동작가, 보조작가, 각색, 각본 등 본인 역할을 정확히 기재해주시기 바랍니다.)
@@ -214,8 +206,7 @@
 					<input type="radio" name="information">비공개
 				</td>					
 			</tr>
-			<caption style="text-align: center; caption-side: bottom;">
-				<br>
+			<caption style="text-align: center; caption-side: bottom;"><br>
 				<input type="button" name="savebutton" id="savebutton" value="저장" onclick="save();">
 				<input type="button" name="cancelbutton" id="cancelbutton" value="취소" onclick="cancel();">
 			</caption>
@@ -285,19 +276,24 @@
 			function overlap() {
 				alert("중복 확인 기능은 현재 구현중입니다.");
 			}
+			
 			function search() {
 				alert("검색 기능은 현재 구현중입니다.");
 			}
+			
 			function add() {
 				alert("추가 기능은 현재 구현중입니다.");
 			}
+			
 			function delect() {
 				alert("삭제 기능은 현재 구현중입니다.")
 			}
+			
 			function save() {
 				alert("내용이 저장되는척 하고 다음 페이지로 넘어갑니다.");
 				document.getElementById("form").submit();
 			}
+			
 			function cancel() {
 				alert("내용이 취소되는척 하고 다음 페이지로 넘어갑니다.");
 				document.getElementById("form").submit();
