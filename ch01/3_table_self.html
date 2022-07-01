@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+	<meta charset="UTF-8"> <!-- 문자열을 utf-8로 인식함 -->
+	<meta name = "viewport" content = "width = deivce-width , inital-scale=1.0"> <!-- viewpoint로 너비를 장치에 맞추고 확대 배율은 디폴트 설정에 맞춘다. -->
+	<title>self</title>
+	<style type="text/css">
+	table, th, td{
+			border: 1px solid black;
+			border-collapse: collapse;
+	}
+	
+	th, td{
+			padding: 10px;
+	}
+	
+	th{
+		background-color: #93f555;
+		}
+		
+	td{
+		color: orange;
+	}
+	h1, th, td{
+		text-align:center;
+	}
+	
+	caption{
+		text-align: left;
+		font-weight: bolder;
+	}
+	
+	#photo{
+		text-align: center;
+		font-style: italic;
+		color: red;
+		width: 200px;
+	}
+	
+	table{
+		width: 900px;
+		margin: auto;		
+	}
+	
+	.little{
+		width: 100px;
+	}
+	
+	.medium{
+		width: 200px;
+	}
+	.large{
+		width: 500px;
+	}
+		
+	</style>
+</head>
+
+<body>
+	<h1>입사지원서</h1>
+	<table>
+		<th class="little">지원분야</th>
+		<td class="little"></td>
+		<th class="little">경력구분</th>
+		<td class="little">신입</td>
+		<th class="little">희망연봉</th>
+		<td>회사 내규에 따름</td>
+	</table>
+	<br><br>
+	<table>
+		<caption>
+		<p>□ 기본정보</p>
+		</caption>
+		<tr>
+			<td rowspan="6" id="photo">
+				<p>
+					정장차림의 증명사진<br>
+					넣으시면<br>
+					됩니다. 단축키<br>
+					ctrl+N+I
+				</p>
+			</td>
+			<th class="little">성명</th>
+			<td></td>
+			<th class="little">한문</th>
+			<td></td>
+		</tr>
+		<tr>
+			<!-- <td></td> -->
+			<th class="little">영문</th>
+			<td></td>
+			<th class="little">생년월일</th>
+			<td></td>
+		</tr>
+		<tr>
+			<!-- <td></td> -->
+			<th class="little">전화번호</th>
+			<td></td>
+			<th class="little">비상연락망</th>
+			<td></td>
+		</tr>
+		<tr>
+			<!-- <td></td> -->
+			<th class="little">전자우편</th>
+			<td></td>
+			<th class="little">나이</th>
+			<td></td>
+		</tr>
+		<tr>
+			<!-- <td></td> -->
+			<th class="little">주소</th>
+			<td colspan="3"></td>
+			<!-- <th></th>
+			<td></td> -->
+		</tr>
+		<tr>
+			<!-- <td></td> -->
+			<th class="little">취미 생활</th>
+			<td colspan="3" style="text-align: left">선택 사항</td>
+			<!-- <th></th>
+			<td></td> -->
+		</tr>		
+	</table>
+	<br><br>
+	<table>
+		<caption>
+			□ 학력사항 (최신이력이 가장 위로)
+		</caption>
+		<tr>
+			<th class="medium">기간</th>
+			<th>출신학교</th>
+			<th class="little">구분</th>
+			<th class="medium">학과</th>
+			<th class="little">소재지</th>
+		</tr>
+		<tr>
+			<td>2017.03~2021.02</td>
+			<td>oo대학교</td>
+			<td>졸업</td>
+			<td>컴퓨터공학과</td>
+			<td>서울</td>
+		</tr>
+		<tr>
+			<td>2014.03~2017.02</td>
+			<td>oo고등학교</td>
+			<td>졸업</td>
+			<td>-</td>
+			<td>서울</td>
+		</tr>
+	</table>
+	<br><br>
+	<table>
+		<caption>
+			□ 교육연수
+		</caption>
+		<tr>
+			<th class="medium">연수기간</th>
+			<th class="medium">연수기관</th>
+			<th class="large">연수과정 및 내용</th>
+		</tr>
+		<tr>
+			<td>2021.12.30~2022.6.22</td>
+			<td>
+				㈜이젠 아카데미<br>
+				(서울 강남역 본원)<br>
+				국가기간전략산업직종 훈련
+			</td>
+			<td>
+				<strong>Open API활용 자바 안드로이드 웹&앱 개발자</strong><br>
+				: JAVA, JAVASCRIPT, JSP, SPRING, HTML, CSS, GIT,<br>
+				Bootstrap, JSTL, AJAX POSTMAN AWS TOMCAT, 등을<br>
+				공부하여 자바를 이용한 웹 프로그래밍 역량을 키웠습니다.
+			</td>
+		</tr>
+	</table>
+	<br><br>
+	
+
+</body>
+</html>
