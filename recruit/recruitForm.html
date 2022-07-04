@@ -50,19 +50,9 @@
 		width: 900px;
 		margin: auto;		
 	}
-	
-	.little{
-		width: 100px;
-	}
-	
-	.medium{
-		width: 200px;
-	}
-	.large{
-		width: 500px;
-	}
-		
+
 	</style>
+	<link href="./css/size.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -72,16 +62,16 @@
 		</center>
 		<h1>입사지원서</h1>
 		<table>
-			<th class="little">지원분야</th>
+			<th class="small">지원분야</th>
 			<td>
 				<input type="text" name="area" id="area">
 			</td>
-			<th class="little">경력구분</th>
+			<th class="small">경력구분</th>
 			<td>
 				<input type="radio" name="career" value="경력">경력
 				<input type="radio" name="career" value="신입">신입
 			</td>
-			<th class="little">희망연봉</th>
+			<th class="small">희망연봉</th>
 			<td>회사 내규에 따름</td>
 		</table>
 		<br><br>
@@ -93,20 +83,21 @@
 				<td rowspan="5" id="photo">
 					<input type="file" name="profileimage" value="파일선택">
 				</td>
-				<th class="little">성명</th>
+				<th class="small">성명</th>
 				<td>
 					<input type="text" name="name" id="name">
 				</td>
-				<th class="little">한문</th>
+				<th class="small">성별</th>
 				<td>
-					<input type="text" name="Chinese">
+					<input type="radio" value="남자">남자
+					<input type="radio" value="여자">여자
 				</td>
 			</tr>
 			<tr>
 				<!-- <td></td> -->
-				<th class="little">생년월일</th>
+				<th class="small">생년월일</th>
 				<td colspan="3">
-					<input type="text" name="bthy" placeholder="년도 (4자리수)">
+					<input type="text" name="bthy" placeholder="년도 (4자리수)"> 년
 					<select name="bthm">
 						<option value="">선택</option>
 						<option value="1">1월</option>
@@ -122,23 +113,33 @@
 						<option value="11">11월</option>
 						<option value="12">12월</option>
 					</select>
-					<input type="text" name="bthd" placeholder="일">
+					<input type="text" name="bthd" placeholder="일">일
 				</td>
 				<!-- <th></th>
 				<td></td> -->
 			</tr>
 			<tr>
 				<!-- <td></td> -->
-				<th class="little">전화번호</th>
+				<th class="small">전화번호</th>
 				<td colspan="3">
-				
+					<select name="Lpn">
+						<option value="">선택</option>
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="070">070</option>
+					</select>
+					-
+					<input type="text" name="cpn" id="cpn">
+					-
+					<input type="text" name="rpn" id="rpn">
+					<br>
 				</td>
 				<!-- <th></th>
 				<td></td> -->
 			</tr>
 			<tr>
 				<!-- <td></td> -->
-				<th class="little">email</th>
+				<th class="small">email</th>
 				<td colspan="3">
 					<input type="text" name="hemail" id="hemail">
 					@
@@ -158,7 +159,7 @@
 			</tr>
 			<tr>
 				<!-- <td></td> -->
-				<th class="little">주소</th>
+				<th class="small">주소</th>
 				<td colspan="3">
 					<input type="text" name="address" id="address" style="width: 100%">
 				</td>
@@ -174,9 +175,9 @@
 			<tr>
 				<th class="medium">기간</th>
 				<th>출신학교</th>
-				<th class="little">구분</th>
+				<th class="small">구분</th>
 				<th class="medium">학과</th>
-				<th class="little">소재지</th>
+				<th class="small">소재지</th>
 			</tr>
 			<tr>
 				<td>2017.03~2021.02</td>
@@ -201,7 +202,7 @@
 			<tr>
 				<th class="medium">연수기간</th>
 				<th class="medium">연수기관</th>
-				<th class="large">연수과정 및 내용</th>
+				<th class="x-large">연수과정 및 내용</th>
 			</tr>
 			<tr>
 				<td>2021.12.30~2022.6.22</td>
