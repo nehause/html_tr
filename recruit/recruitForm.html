@@ -90,7 +90,7 @@
 			<p>□ 기본정보</p>
 			</caption>
 			<tr>
-				<td rowspan="6" id="photo">
+				<td rowspan="5" id="photo">
 					<input type="file" name="profileimage" value="파일선택">
 				</td>
 				<th class="little">성명</th>
@@ -130,28 +130,38 @@
 			<tr>
 				<!-- <td></td> -->
 				<th class="little">전화번호</th>
-				<td colspan="3"></td>
-				<!-- <th></th>
-				<td></td> -->
-			</tr>
-			<tr>
-				<!-- <td></td> -->
-				<th class="little">전자우편</th>
-				<td colspan="3"></td>
+				<td colspan="3">
+				
+				</td>
 				<!-- <th></th>
 				<td></td> -->
 			</tr>
 			<tr>
 				<!-- <td></td> -->
 				<th class="little">email</th>
-				<td colspan="3"></td>
+				<td colspan="3">
+					<input type="text" name="hemail" id="hemail">
+					@
+					<input type="text" name="temail" id="temail" value="">
+					<select name="seltemail" id="seltemail">
+						<option value="">메일주소선택</option>
+						<option value="google.com">구글</option>
+						<option value="naver.com">네이버</option>
+						<option value="daum.com">다음</option>
+						<option value="hanmail.com">한메일</option>
+						<option value="kakao.com">카카오</option>
+						<option value="">직접입력</option>
+					</select>
+				</td>
 				<!-- <th></th>
 				<td></td> -->
 			</tr>
 			<tr>
 				<!-- <td></td> -->
 				<th class="little">주소</th>
-				<td colspan="3" style="text-align: left"></td>
+				<td colspan="3">
+					<input type="text" name="address" id="address" style="width: 100%">
+				</td>
 				<!-- <th></th>
 				<td></td> -->
 			</tr>		
