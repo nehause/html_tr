@@ -3,9 +3,155 @@
 <head>
 	<meta charset="UTF-8"> <!-- 문자열을 utf-8로 인식함 -->
 	<meta name = "viewport" content = "width = deivce-width , inital-scale=1.0"> <!-- viewpoint로 너비를 장치에 맞추고 확대 배율은 디폴트 설정에 맞춘다. -->
-	<title>게시판</title>
+	<title>입사 지원자 명단</title>
+	<style type="text/css">
+		body{
+			background-color: #f5f6f7;
+
+		}
+	
+		table, th, td{
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align: center;
+			margin: auto;
+		}
+		tr{
+			
+		}
+		
+		th{
+			ckground-color: #00c850;
+			color: white;ba
+		}
+		
+		th, td{
+			padding: 10px;
+		}
+		
+		.button{
+			width: 80px;
+			height: 30px;
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+		
+		.small{
+			width: 80px;
+		}
+		
+		.middle{
+			width: 200px;
+		}
+		
+		.large{
+			width: 300px;
+		}
+		
+		.x-large{
+			width: 400px;
+		}
+	</style>
 </head>
 
 <body>
+	<form method="get"action="./recruitView.html" id="list">
+		<center>
+			<img alt="입사지원서" src="./images/name.png" width="300px"><br>
+		</center>
+		<table>
+			<caption style="text-align: left">
+			<strong style="font-size: x-large;">입사지원명단</strong>
+			</caption>
+			<tr>
+				<th><input type="checkbox" name="applicantlist" value="list_all" id="listall" onclick='selectall()'></th>
+				<th class="small">지원번호</th>
+				<th class="small">지원분야</th>
+				<th class="small">경력구분</th>
+				<th class="small">이름</th>
+				<th class="small">성별</th>
+				<th class="middle">생년월일</th>
+				<th class="middle">전화번호</th>
+				<th class="large">email</th>
+				<th class="x-large">주소</th>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="applicantlist" value="list_1"></td>
+				<td>1</td>
+				<td>백엔드</td>
+				<td>신입</td>
+				<td><a href="recruitView.html">진휘재</a></td>
+				<td>남자</td>
+				<td>1997.2.13</td>
+				<td>010-3944-1143</td>
+				<td>wls974@naver.com</td>
+				<td>서울시 송파구 삼전동 56-5번지 302호</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="applicantlist" value="list_2"></td>
+				<td>2</td>
+				<td>프론트엔드</td>
+				<td>경력</td>
+				<td>이현구</td>
+				<td>남자</td>
+				<td>1985.8.16</td>
+				<td>010-5567-1557</td>
+				<td>antman@naver.com</td>
+				<td>서울시 송파구 삼전동 52-5번지</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="applicantlist" value="list_3"></td>
+				<td>3</td>
+				<td>마케팅</td>
+				<td>신입</td>
+				<td>김소명</td>
+				<td>여자</td>
+				<td>1999.5.25</td>
+				<td>010-4485-4125</td>
+				<td>wish@gmail.com</td>
+				<td>서울시 서초구 서초4 서초대로77길 55동</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="applicantlist" value="list_4"></td>
+				<td>4</td>
+				<td>SaaS</td>
+				<td>신입</td>
+				<td>김상호</td>
+				<td>남자</td>
+				<td>1992.3.19</td>
+				<td>010-4188-1645</td>
+				<td>multliple@gmail.com</td>
+				<td>서울시 광진구 광나루로 545</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="applicantlist" value="list_5"></td>
+				<td>5</td>
+				<td>백엔드</td>
+				<td>경력</td>
+				<td>성지영</td>
+				<td>여자</td>
+				<td>1988.1.12</td>
+				<td>010-1225-0401</td>
+				<td>holyland@naver.com</td>
+				<td>서울시 종로구 세종대로 175</td>
+			</tr>
+			<caption style="caption-side: bottom;">
+			<div style="float:left;"> 
+				<input type="button" id="buttonreg" class="button" value="등록" onclick="location.href='recruitForm.html'"> 
+			</div>
+			<div style="float:right;">
+				<input type="button" id="buttondel" class="button" value="삭제" onclick="listdel();">
+			</div>		
+		</caption>
+		</table>
+
+	</form>
+	<script type="text/javascript">
+		
+		function listdel() {
+			alert("지원자들의 정보는 삭제할 수 없습니다.");
+		}
+			
+	</script>
 </body>
 </html>
