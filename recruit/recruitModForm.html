@@ -10,7 +10,7 @@
 <body>
 	<form name='rmf' method="get"action="./recruitView.html" id="Modform">
 		<center>
-			<img alt="입사지원서" src="./images/logo.png" class="large"><br>
+			<img alt="입사지원서" src="./images/logo.png"><br>
 		</center>
 		<h1>입사지원서</h1>
 		<table>
@@ -29,7 +29,7 @@
 		<br><br>
 		<table>
 			<caption>
-			<p>□ 기본정보</p>
+				<p>□ 기본정보</p>
 			</caption>
 			<tr>
 				<td rowspan="5" class="middle">
@@ -278,8 +278,12 @@
 			document.getElementById("Modform").submit();
 		}
 		function returnview() {
-			alert("지금까지의 내용은 저장되지 않습니다.");
-			location.href='recruitview.html'
+			if (confirm("지금까지 적은 내용은 저장되지 않습니다. 취소합니까?") == true){
+				 location.href='recruitView.html'
+			 }
+			 else{
+			     return false;
+			 }
 			
 		}
 		
@@ -307,7 +311,7 @@
 		    var tablerow = document.getElementById('modcertificate');
 		    if (tablerow.rows.length < 3) return;
 		    tablerow.deleteRow( tablerow.rows.length-1 ); // 하단부터 삭제
-		  }
+		}
 		
 		function addsirow() {
 			var tableData=document.getElementById('modsenior');
@@ -327,8 +331,7 @@
 		    var tablerow = document.getElementById('modsenior');
 		    if (tablerow.rows.length < 3) return;
 		    tablerow.deleteRow( tablerow.rows.length-1 ); // 하단부터 삭제
-		  }
-	
+		}
 	</script>
 </body>
 </html>
