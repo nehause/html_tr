@@ -32,6 +32,7 @@
 			border: 1px solid black;
 			border-radius: 5px;
 		}
+		
 	</style>
 	<link href="./css/size.css" rel="stylesheet" type="text/css">
 </head>
@@ -39,7 +40,7 @@
 <body>
 	<form method="get"action="./recruitView.html" id="list">
 		<center>
-			<img alt="입사지원서" src="./images/name.png" width="300px"><br>
+			<img alt="입사지원서" src="./images/logo.png" class="medium"><br>
 		</center>
 		<table>
 			<caption style="text-align: left">
@@ -61,13 +62,13 @@
 				<td><input type="checkbox" name="applicantlist" value="list_1"></td>
 				<td>1</td>
 				<td>백엔드</td>
-				<td>신입</td>
-				<td><a href="recruitView.html">진휘재</a></td>
+				<td>경력</td>
+				<td><a href="recruitView.html">공유</a></td>
 				<td>남자</td>
-				<td>1997.2.13</td>
-				<td>010-3944-1143</td>
-				<td>wls974@naver.com</td>
-				<td>서울시 송파구 삼전동 56-5번지 302호</td>
+				<td>1979.7.10</td>
+				<td>010-1234-5678</td>
+				<td>share@naver.com</td>
+				<td>부산시 동래구 낙민동 중앙하이츠 101동 702호</td>
 			</tr>
 			<tr>
 				<td><input type="checkbox" name="applicantlist" value="list_2"></td>
@@ -119,7 +120,7 @@
 			</tr>
 			<caption style="caption-side: bottom;">
 			<div style="float:left;"> 
-				<input type="button" id="buttonreg" class="button" value="등록" onclick="location.href='recruitForm.html'"> 
+				<input type="button" id="buttonreg" class="button" value="등록" onclick="location.href='recruitRegForm.html'"> 
 			</div>
 			<div style="float:right;">
 				<input type="button" id="buttondel" class="button" value="삭제" onclick="listdel();">
@@ -133,7 +134,7 @@
 		function listdel() {
 			alert("지원자들의 정보는 삭제할 수 없습니다.");
 		}
-			
+		
 	</script>
 </body>
 </html>

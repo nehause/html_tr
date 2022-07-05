@@ -3,9 +3,329 @@
 <head>
 	<meta charset="UTF-8"> <!-- 문자열을 utf-8로 인식함 -->
 	<meta name = "viewport" content = "width = deivce-width , inital-scale=1.0"> <!-- viewpoint로 너비를 장치에 맞추고 확대 배율은 디폴트 설정에 맞춘다. -->
-	<title>회원가입</title>
+	<title>입사지원서</title>
+<!-- 	<style type="text/css">
+	body{
+			background-color: #f5f6f7;
+		}
+		
+	table, th, td{
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align:center;
+			margin: auto;
+	}
+	
+	th, td{
+			padding: 10px;
+	}
+	
+	th{
+			background-color: #00c850;
+			color: white;
+	}
+	
+	h1{
+		text-align:center;
+	}
+	
+	caption{
+		text-align: left;
+		font-weight: bolder;
+	}
+	#content{
+		width: 100%;
+		height: 50px;
+	}
+
+	#photo{
+		text-align: center;
+		font-style: italic;
+		color: red;
+		width: 200px;
+	}
+	
+	.button{
+			width: 80px;
+			height: 30px;
+			border: 1px solid black;
+			border-radius: 5px;
+	}
+	
+	table{
+		width: 900px;		
+	}
+
+	</style> -->
+	<link href="./css/application_form.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+	<form method="get"action="./recruitlist.html" id="form">
+		<center>
+			<img alt="입사지원서" src="./images/logo.png" class="large"><br>
+		</center>
+		<h1>입사지원서</h1>
+		<table>
+			<th class="small">지원분야</th>
+			<td>
+				<input type="text" name="area" id="area" class="free">
+			</td>
+			<th class="small">경력구분</th>
+			<td>
+				<input type="radio" name="career" value="경력">경력
+				<input type="radio" name="career" value="신입">신입
+			</td>
+			<th class="small">희망연봉</th>
+			<td>회사 내규에 따름</td>
+		</table>
+		<br><br>
+		<table>
+			<caption>
+			<p>□ 기본정보</p>
+			</caption>
+			<tr>
+				<td rowspan="5" id="photo">
+					<input type="file" name="profileimage" value="파일선택">
+				</td>
+				<th class="small">성명</th>
+				<td>
+					<input type="text" name="name" id="name" class="free">
+				</td>
+				<th class="small">성별</th>
+				<td>
+					<input type="radio" value="남자">남자
+					<input type="radio" value="여자">여자
+				</td>
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th class="small">생년월일</th>
+				<td colspan="3">
+					<input type="text" name="bthy" placeholder="년도 (4자리수)"> 년
+					<select name="bthm" class="small">
+						<option value="">선택</option>
+						<option value="1">1월</option>
+						<option value="2">2월</option>
+						<option value="3">3월</option>
+						<option value="4">4월</option>
+						<option value="5">5월</option>
+						<option value="6">6월</option>
+						<option value="7">7월</option>
+						<option value="8">8월</option>
+						<option value="9">9월</option>
+						<option value="10">10월</option>
+						<option value="11">11월</option>
+						<option value="12">12월</option>
+					</select>
+					<input type="text" name="bthd" placeholder="일">일
+				</td>
+				<!-- <th></th>
+				<td></td> -->
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th class="small">전화번호</th>
+				<td colspan="3">
+					<select name="Lpn" class="small">
+						<option value="">선택</option>
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="070">070</option>
+					</select>
+					-
+					<input type="text" name="cpn" id="cpn">
+					-
+					<input type="text" name="rpn" id="rpn">
+					<br>
+				</td>
+				<!-- <th></th>
+				<td></td> -->
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th class="small">email</th>
+				<td colspan="3">
+					<input type="text" name="hemail" id="hemail">
+					@
+					<input type="text" name="temail" id="temail" value="">
+					<select name="seltemail" id="seltemail">
+						<option value="">메일주소선택</option>
+						<option value="google.com">구글</option>
+						<option value="naver.com">네이버</option>
+						<option value="daum.com">다음</option>
+						<option value="hanmail.com">한메일</option>
+						<option value="kakao.com">카카오</option>
+						<option value="">직접입력</option>
+					</select>
+				</td>
+				<!-- <th></th>
+				<td></td> -->
+			</tr>
+			<tr>
+				<!-- <td></td> -->
+				<th class="small">주소</th>
+				<td colspan="3">
+					<input type="text" name="address" id="address" class="free">
+				</td>
+				<!-- <th></th>
+				<td></td> -->
+			</tr>		
+		</table>
+		<br><br>
+		<table>
+			<caption>
+				□ 학력사항 (최신이력이 가장 위로)
+			</caption>
+			<tr>
+				<th class="medium">기간</th>
+				<th>출신학교</th>
+				<th class="small">구분</th>
+				<th class="medium">학과</th>
+				<th class="small">소재지</th>
+			</tr>
+			<tr>
+				<td>
+					<input type="month" name="sumonth"> ~ <input type="month" name="eumonth">
+				</td>
+				<td>
+					<input type="text" name="uname" class="small">
+				</td>
+				<td>
+					<select name="usituation" class="small">
+						<option value="">선택
+						<option value="attending">재학
+						<option value="graduate">졸업
+						<option value="dropout">중퇴
+					</select>
+				</td>
+				<td>
+					<input type="text" name="udepartment" class="medium">
+				</td>
+				<td>
+					<input type="text" name="ulocation" class="small">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="month" name="shmonth"> ~ <input type="month" name="ehmonth">
+				</td>
+				<td>
+					<input type="text" name="hname" class="small">
+				</td>
+				<td>
+					<select name="hsituation" class="small">
+						<option value="">선택
+						<option value="attending">재학
+						<option value="graduate">졸업
+						<option value="dropout">중퇴
+					</select>
+				</td>
+				<td>
+					<input type="text" name="hdepartment" class="medium">
+				</td>
+				<td>
+					<input type="text" name="hlocation" class="small">
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		<table>
+			<caption>
+				□ 교육연수
+			</caption>
+			<tr>
+				<th class="medium">연수기간</th>
+				<th class="medium">연수기관</th>
+				<th class="x-large">연수과정 및 내용</th>
+			</tr>
+			<tr>
+				<td>
+					<input type="month" name="semonth"> ~ <input type="month" name="eemonth">
+				</td>
+				<td>
+					<input type="text" name="ename" class="medium">
+				</td>
+				<td>
+					<textarea name="econtent" id="content"></textarea>
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		<table>
+			<caption>
+				□ 자격사항
+			</caption>
+			<tr>
+				<th class="medium">취득일</th>
+				<th class="large">종류 및 등급</th>
+				<th class="medium">발행처</th>
+				<th>보유기술 및 수준</th>
+			</tr>
+			<tr>
+				<td>
+					<input type="month" name="cmonth" class="medium">
+				</td>
+				<td>
+					<input type="text" name="cname" class="large">
+				</td>
+				<td>
+					<input type="text" name="cpublish" class="medium">
+				</td>
+				<td>
+					<input tpye="text" name="ccontent" Class="free">
+				</td>
+			</tr>	
+			<caption style="caption-side: bottom; text-align: right;">
+				<input type="button" class="button" id="addc" value="추가" onclick="addc()">
+			</caption>
+		</table>
+		<table>
+			<caption>
+				□ 경력사항(경력자만 기입해주세요)
+			</caption>
+			<tr>
+				<th class="medium">활동기간</th>
+				<th class="medium">기관</th>
+				<th class="small">담당업무</th>
+				<th>경험 및 습득역량</th>
+			</tr>
+			<tr>
+				<td>
+					<input type="month" name="ssimonth"> ~ <input type="month" name="esimonth">
+				</td>
+				<td>
+					<input type="text" name="siname" class="medium">
+				</td>
+				<td>
+					<input type="text" name="siarea" class="small">
+				</td>
+				<td>
+					<input type="text" name="sicontent" class="free">
+				</td>
+			</tr>
+			<caption style="caption-side: bottom; text-align: right;">
+				<input type="button" class="button" id="addsi" value="추가" onclick="addsi()">
+			</caption>
+		</table>
+		<table>
+			<caption style="caption-side: bottom;">
+				<div style="float:left;"> 
+					<input type="button" class="button" id="buttonreg" value="저장" onclick="save()"> 
+				</div>
+				<div style="float:right;">
+					<input type="button" id="buttondel" class="button" value="목록으로" onclick="location.href='recruitlist.html'">
+				</div>		
+			</caption>
+		</table>
+	</form>
+	<script type="text/javascript">
+		function save() {
+			alert("내용이 저장됩니다.");
+			document.getElementById("form").submit();
+		}
+	
+	
+	</script>
 </body>
 </html>
