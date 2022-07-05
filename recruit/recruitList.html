@@ -71,7 +71,7 @@
 				<th class="x-large">주소</th>
 			</tr>
 			<tr onclick="location.href='recruitView.html'" style="cursor: pointer;" >
-				<td onclick="event.cancelBubble=true"><input type="checkbox" name="applicantlist" value="list_1"></td>
+				<td onclick="event.cancelBubble=true"><input type="checkbox" name="applicantlist" value="list_1" onclick="checkSelectAll();"></td>
 				<td>1</td>
 				<td>백엔드</td>
 				<td>경력</td>
@@ -83,7 +83,7 @@
 				<td>부산시 동래구 낙민동 중앙하이츠 101동 702호</td>
 			</tr>
 			<tr>
-				<td><input type="checkbox" name="applicantlist" value="list_2"></td>
+				<td><input type="checkbox" name="applicantlist" value="list_2" onclick="checkSelectAll();"></td>
 				<td>2</td>
 				<td>프론트엔드</td>
 				<td>경력</td>
@@ -95,7 +95,7 @@
 				<td>서울시 송파구 삼전동 52-5번지</td>
 			</tr>
 			<tr>
-				<td><input type="checkbox" name="applicantlist" value="list_3"></td>
+				<td><input type="checkbox" name="applicantlist" value="list_3" onclick="checkSelectAll();"></td>
 				<td>3</td>
 				<td>마케팅</td>
 				<td>신입</td>
@@ -107,7 +107,7 @@
 				<td>서울시 서초구 서초4 서초대로77길 55동</td>
 			</tr>
 			<tr>
-				<td><input type="checkbox" name="applicantlist" value="list_4"></td>
+				<td><input type="checkbox" name="applicantlist" value="list_4" onclick="checkSelectAll();"></td>
 				<td>4</td>
 				<td>SaaS</td>
 				<td>신입</td>
@@ -119,7 +119,7 @@
 				<td>서울시 광진구 광나루로 545</td>
 			</tr>
 			<tr>
-				<td><input type="checkbox" name="applicantlist" value="list_5"></td>
+				<td><input type="checkbox" name="applicantlist" value="list_5" onclick="checkSelectAll();"></td>
 				<td>5</td>
 				<td>백엔드</td>
 				<td>경력</td>
@@ -167,6 +167,22 @@
 		function listdel() {
 			alert("지원자들의 정보는 삭제할 수 없습니다.");
 		}
+		
+		function checkSelectAll()  {
+
+			  const checkboxes = document.querySelectorAll('input[name="applicantlist"]');
+
+			  const checked = document.querySelectorAll('input[name="applicantlist"]:checked');
+
+			  const selectAll = document.querySelector('input[name="listall"]');
+			  
+			  if(checkboxes.length === checked.length)  {
+			    selectAll.checked = true;
+			  }else {
+			    selectAll.checked = false;
+			  }
+			
+			}
 		
 		function selectall(selectall)  {
 		  const checkboxes = document.getElementsByName('applicantlist');
