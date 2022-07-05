@@ -61,7 +61,7 @@
 </head>
 
 <body>
-	<form name='rgf' method="get"action="./recruitlist.html" id="form">
+	<form name='rgf' method="get"action="./recruitlist.html" id="regform">
 		<center>
 			<img alt="입사지원서" src="./images/logo.png" class="large"><br>
 		</center>
@@ -252,7 +252,7 @@
 			</tr>
 		</table>
 		<br><br>
-		<table id="certificate">
+		<table id="regcertificate">
 			<caption>
 				□ 자격사항
 			</caption>
@@ -281,7 +281,7 @@
 				<input type="button" class="button" id="delc" value="삭제" onclick="delcrow();">
 			</caption>
 		</table>
-		<table id="senior">
+		<table id="regsenior">
 			<caption>
 				□ 경력사항(경력자만 기입해주세요)
 			</caption>
@@ -324,14 +324,14 @@
 	<script type="text/javascript">
 		function save() {
 			alert("내용이 저장됩니다.");
-			document.getElementById("form").submit();
+			document.getElementById("regform").submit();
 		}
 		function selemail() {
 			document.rgf.temail.value = document.rgf.seltemail.value;
 			
 		}
 		function addcrow() {
-			var tableData=document.getElementById('certificate');
+			var tableData=document.getElementById('regcertificate');
 			var row=tableData.insertRow(tableData.rows.length);
 			
 			var cell1 = row.insertCell(0);
@@ -346,13 +346,13 @@
 		}
 		
 		function delcrow() {
-		    var tablerow = document.getElementById('certificate');
+		    var tablerow = document.getElementById('regcertificate');
 		    if (tablerow.rows.length < 1) return;
 		    tablerow.deleteRow( tablerow.rows.length-1 ); // 하단부터 삭제
 		  }
 		
 		function addsirow() {
-			var tableData=document.getElementById('senior');
+			var tableData=document.getElementById('regsenior');
 			var row=tableData.insertRow(tableData.rows.length);
 			
 			var cell1 = row.insertCell(0);
@@ -366,7 +366,7 @@
 			cell4.innerHTML = "<td><input type='text' name='sicontent' class='free'></td>";
 		}
 		function delsirow() {
-		    var tablerow = document.getElementById('senior');
+		    var tablerow = document.getElementById('regsenior');
 		    if (tablerow.rows.length < 1) return;
 		    tablerow.deleteRow( tablerow.rows.length-1 ); // 하단부터 삭제
 		  }

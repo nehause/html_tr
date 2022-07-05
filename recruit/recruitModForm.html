@@ -253,7 +253,7 @@
 			</tr>
 		</table>
 		<br><br>
-		<table>
+		<table id="modcertificate">
 			<caption>
 				□ 자격사항
 			</caption>
@@ -282,7 +282,7 @@
 				<input type="button" class="button" id="delc" value="삭제" onclick="delcrow();">
 			</caption>
 		</table>
-		<table>
+		<table id="modsenior">
 			<caption>
 				□ 경력사항(경력자만 기입해주세요)
 			</caption>
@@ -334,7 +334,7 @@
 		}
 		
 		function addcrow() {
-			var tableData=document.getElementById('certificate');
+			var tableData=document.getElementById('modcertificate');
 			var row=tableData.insertRow(tableData.rows.length);
 			
 			var cell1 = row.insertCell(0);
@@ -349,13 +349,13 @@
 		}
 		
 		function delcrow() {
-		    var tablerow = document.getElementById('certificate');
+		    var tablerow = document.getElementById('modcertificate');
 		    if (tablerow.rows.length < 1) return;
 		    tablerow.deleteRow( tablerow.rows.length-1 ); // 하단부터 삭제
 		  }
 		
 		function addsirow() {
-			var tableData=document.getElementById('senior');
+			var tableData=document.getElementById('modsenior');
 			var row=tableData.insertRow(tableData.rows.length);
 			
 			var cell1 = row.insertCell(0);
@@ -369,7 +369,7 @@
 			cell4.innerHTML = "<td><input type='text' name='sicontent' class='free'></td>";
 		}
 		function delsirow() {
-		    var tablerow = document.getElementById('senior');
+		    var tablerow = document.getElementById('modsenior');
 		    if (tablerow.rows.length < 1) return;
 		    tablerow.deleteRow( tablerow.rows.length-1 ); // 하단부터 삭제
 		  }
