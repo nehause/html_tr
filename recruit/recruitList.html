@@ -31,6 +31,7 @@
 			height: 30px;
 			border: 1px solid black;
 			border-radius: 5px;
+			cursor: pointer;
 		}
 		
 	</style>
@@ -58,17 +59,19 @@
 				<th class="large">email</th>
 				<th class="x-large">주소</th>
 			</tr>
-			<tr>
+			<tr style="cursor: pointer" onclick="location.href='recruitView.html'">
+				<a href='recruitView.html' style="cursor:hand;">
 				<td><input type="checkbox" name="applicantlist" value="list_1"></td>
 				<td>1</td>
 				<td>백엔드</td>
 				<td>경력</td>
-				<td><a href="recruitView.html">공유</a></td>
+				<td>공유</td>
 				<td>남자</td>
 				<td>1979.7.10</td>
 				<td>010-1234-5678</td>
 				<td>share@naver.com</td>
 				<td>부산시 동래구 낙민동 중앙하이츠 101동 702호</td>
+				</a>
 			</tr>
 			<tr>
 				<td><input type="checkbox" name="applicantlist" value="list_2"></td>
