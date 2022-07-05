@@ -61,7 +61,7 @@
 </head>
 
 <body>
-	<form method="get"action="./recruitlist.html" id="form">
+	<form name='rgf' method="get"action="./recruitlist.html" id="form">
 		<center>
 			<img alt="입사지원서" src="./images/logo.png" class="large"><br>
 		</center>
@@ -149,7 +149,7 @@
 					<input type="text" name="hemail" id="hemail">
 					@
 					<input type="text" name="temail" id="temail" value="">
-					<select name="seltemail" id="seltemail">
+					<select name="seltemail" id="seltemail" onchange="selemail();">
 						<option value="">메일주소선택</option>
 						<option value="google.com">구글</option>
 						<option value="naver.com">네이버</option>
@@ -252,7 +252,7 @@
 			</tr>
 		</table>
 		<br><br>
-		<table>
+		<table id="certificate">
 			<caption>
 				□ 자격사항
 			</caption>
@@ -277,10 +277,11 @@
 				</td>
 			</tr>	
 			<caption style="caption-side: bottom; text-align: right;">
-				<input type="button" class="button" id="addc" value="추가" onclick="addc()">
+				<input type="button" class="button" id="addc" value="추가" onclick="addcrow();">
+				<input type="button" class="button" id="delc" value="삭제" onclick="delcrow();">
 			</caption>
 		</table>
-		<table>
+		<table id="senior">
 			<caption>
 				□ 경력사항(경력자만 기입해주세요)
 			</caption>
@@ -305,13 +306,14 @@
 				</td>
 			</tr>
 			<caption style="caption-side: bottom; text-align: right;">
-				<input type="button" class="button" id="addsi" value="추가" onclick="addsi()">
+				<input type="button" class="button" id="addsi" value="추가" onclick="addsirow();">
+				<input type="button" class="button" id="delsi" value="삭제" onclick="delsirow();">
 			</caption>
 		</table>
 		<table>
 			<caption style="caption-side: bottom;">
 				<div style="float:left;"> 
-					<input type="button" class="button" id="buttonreg" value="저장" onclick="save()"> 
+					<input type="button" class="button" id="buttonreg" value="저장" onclick="save();"> 
 				</div>
 				<div style="float:right;">
 					<input type="button" id="buttondel" class="button" value="목록으로" onclick="location.href='recruitlist.html'">
@@ -324,8 +326,51 @@
 			alert("내용이 저장됩니다.");
 			document.getElementById("form").submit();
 		}
-	
-	
+		function selemail() {
+			document.rgf.temail.value = document.rgf.seltemail.value;
+			
+		}
+		function addcrow() {
+			var tableData=document.getElementById('certificate');
+			var row=tableData.insertRow(tableData.rows.length);
+			
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			
+			cell1.innerHTML = "<td><input type='month' name='cmonth' class='medium'></td>";
+			cell2.innerHTML = "<td><input type='text' name='cname' class='large'></td>";
+			cell3.innerHTML = "<td><input type='text' name='cpublish' class='medium'></td>";
+			cell4.innerHTML = "<td><input type='text' name='ccontent' class='free'></td>";
+		}
+		
+		function delcrow() {
+		    var tablerow = document.getElementById('certificate');
+		    if (tablerow.rows.length < 1) return;
+		    tablerow.deleteRow( tablerow.rows.length-1 ); // 하단부터 삭제
+		  }
+		
+		function addsirow() {
+			var tableData=document.getElementById('senior');
+			var row=tableData.insertRow(tableData.rows.length);
+			
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			var cell4 = row.insertCell(3);
+			
+			cell1.innerHTML = "<td><input type='month' name='ssimonth'> ~ <input type='month' name='esimonth'></td>";
+			cell2.innerHTML = "<td><input type='text' name='siname' class='medium'></td>";
+			cell3.innerHTML = "<td><input type='text' name='siarea' class='small'></td>";
+			cell4.innerHTML = "<td><input type='text' name='sicontent' class='free'></td>";
+		}
+		function delsirow() {
+		    var tablerow = document.getElementById('senior');
+		    if (tablerow.rows.length < 1) return;
+		    tablerow.deleteRow( tablerow.rows.length-1 ); // 하단부터 삭제
+		  }
+		
 	</script>
 </body>
 </html>
