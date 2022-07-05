@@ -39,11 +39,12 @@ caption{
 }
 
 .button{
-		width: 80px;
-		height: 30px;
-		border: 1px solid black;
-		border-radius: 5px;
-		cursor: pointer;
+			width: 100px;
+			height: 50px;
+			border: 1px solid #00c850;
+			cursor: pointer;
+			background-color: #00c850;
+			color: white;
 }
 
 table{
@@ -52,6 +53,10 @@ table{
 
 .small{
 	width: 80px;
+}
+
+.normal{
+	width: 150px;
 }
 
 .middle{

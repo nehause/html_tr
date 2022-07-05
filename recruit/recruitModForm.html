@@ -16,7 +16,7 @@
 		<table>
 			<th class="small">지원분야</th>
 			<td>
-				<input type="text" name="area" id="area" class="free" value="백엔드">
+				<input type="text" name="area" id="area" class="middle" value="백엔드">
 			</td>
 			<th class="small">경력구분</th>
 			<td>
@@ -32,12 +32,12 @@
 			<p>□ 기본정보</p>
 			</caption>
 			<tr>
-				<td rowspan="5" class="medium">
+				<td rowspan="5" class="middle">
 					<img alt="증명사진" src="./images/share.jpg" width="200px">
 				</td>
 				<th class="small">성명</th>
 				<td>
-					<input type="text" name="name" id="name" class="free" value="공유">
+					<input type="text" name="name" id="name" class="middle" value="공유">
 				</td>
 				<th class="small">성별</th>
 				<td>
@@ -126,10 +126,10 @@
 				□ 학력사항 (최신이력이 가장 위로)
 			</caption>
 			<tr>
-				<th class="medium">기간</th>
+				<th class="large">기간</th>
 				<th>출신학교</th>
 				<th class="small">구분</th>
-				<th class="medium">학과</th>
+				<th class="normal">학과</th>
 				<th class="small">소재지</th>
 			</tr>
 			<tr>
@@ -148,7 +148,7 @@
 					</select>
 				</td>
 				<td>
-					<input type="text" name="udepartment" class="medium" value="컴퓨터공학">
+					<input type="text" name="udepartment" class="middle" value="컴퓨터공학">
 				</td>
 				<td>
 					<input type="text" name="ulocation" class="small" value="수원">
@@ -170,7 +170,7 @@
 					</select>
 				</td>
 				<td>
-					<input type="text" name="udepartment" class="medium" value="이과">
+					<input type="text" name="udepartment" class="middle" value="이과">
 				</td>
 				<td>
 					<input type="text" name="ulocation" class="small" value="부산">
@@ -183,16 +183,16 @@
 				□ 교육연수
 			</caption>
 			<tr>
-				<th class="medium">연수기간</th>
-				<th class="medium">연수기관</th>
-				<th class="x-large">연수과정 및 내용</th>
+				<th class="large">연수기간</th>
+				<th class="normal">연수기관</th>
+				<th>연수과정 및 내용</th>
 			</tr>
 			<tr>
 				<td>
 					<input type="month" name="semonth"> ~ <input type="month" name="eemonth">
 				</td>
 				<td>
-					<input type="text" name="ename" class="medium" value="㈜이젠 아카데미">
+					<input type="text" name="ename" class="normal" value="㈜이젠 아카데미">
 				</td>
 				<td>
 					<textarea name="econtent" id="content">Open API활용 자바 안드로이드 웹&앱 개발자 : JAVA, JAVASCRIPT, JQUERY, JSP, SPRING, HTML, CSS, GIT, Bootstarp, JSTL AJAX POSTMAN AWS TOMCAT, 등을 공부하여 자바를 이용한 웹 프로그래밍 역량을 키웠습니다.</textarea>
@@ -205,26 +205,27 @@
 				□ 자격사항
 			</caption>
 			<tr>
-				<th class="medium">취득일</th>
-				<th class="large">종류 및 등급</th>
-				<th class="medium">발행처</th>
+				<th class="normal">취득일</th>
+				<th class="middle">종류 및 등급</th>
+				<th class="middle">발행처</th>
 				<th>보유기술 및 수준</th>
 			</tr>
 			<tr>
 				<td>
-					<input type="month" name="cmonth" class="medium" value="2003-11">
+					<input type="month" name="cmonth" class="normal" value="2003-11">
 				</td>
 				<td>
-					<input type="text" name="cname" class="large" value="정보처리기사">
+					<input type="text" name="cname" class="middle" value="정보처리기사">
 				</td>
 				<td>
-					<input type="text" name="cpublish" class="medium" value="한국산업인력공단">
+					<input type="text" name="cpublish" class="middle" value="한국산업인력공단">
 				</td>
 				<td>
 					<input tpye="text" name="ccontent" Class="free">
 				</td>
 			</tr>
 			<caption style="caption-side: bottom; text-align: right;">
+				<br>
 				<input type="button" class="button" id="addc" value="추가" onclick="addcrow();">
 				<input type="button" class="button" id="delc" value="삭제" onclick="delcrow();">
 			</caption>
@@ -234,8 +235,8 @@
 				□ 경력사항(경력자만 기입해주세요)
 			</caption>
 			<tr>
-				<th class="medium">활동기간</th>
-				<th class="medium">기관</th>
+				<th class="large">활동기간</th>
+				<th class="normal">기관</th>
 				<th class="small">담당업무</th>
 				<th>경험 및 습득역량</th>
 			</tr>
@@ -244,7 +245,7 @@
 					<input type="month" name="ssimonth" value=""> ~ <input type="month" name="esimonth" value="">
 				</td>
 				<td>
-					<input type="text" name="siname" class="medium" value="">
+					<input type="text" name="siname" class="normal" value="">
 				</td>
 				<td>
 					<input type="text" name="siarea" class="small">
@@ -254,17 +255,19 @@
 				</td>
 			</tr>
 			<caption style="caption-side: bottom; text-align: right;">
+				<br>
 				<input type="button" class="button" id="addsi" value="추가" onclick="addsirow();">
 				<input type="button" class="button" id="delsi" value="삭제" onclick="delsirow();">
 			</caption>
 		</table>
 		<table>
 			<caption style="caption-side: bottom;">
+				<br><br>
 				<div style="float:left;"> 
 					<input type="button" class="button" id="buttonreg" value="저장" onclick="modsave()"> 
 				</div>
 				<div style="float:right;">
-					<input type="button" id="buttondel" class="button" value="돌아가기" onclick="location.href='recruitview.html'">
+					<input type="button" id="buttondel" class="button" value="돌아가기" onclick="returnview();">
 				</div>		
 			</caption>
 		</table>
@@ -273,6 +276,11 @@
 		function modsave() {
 			alert("내용이 저장됩니다.");
 			document.getElementById("Modform").submit();
+		}
+		function returnview() {
+			alert("지금까지의 내용은 저장되지 않습니다.");
+			location.href='recruitview.html'
+			
 		}
 		
 		function selemail() {
@@ -289,9 +297,9 @@
 			var cell3 = row.insertCell(2);
 			var cell4 = row.insertCell(3);
 			
-			cell1.innerHTML = "<td><input type='month' name='cmonth' class='medium'></td>";
-			cell2.innerHTML = "<td><input type='text' name='cname' class='large'></td>";
-			cell3.innerHTML = "<td><input type='text' name='cpublish' class='medium'></td>";
+			cell1.innerHTML = "<td><input type='month' name='cmonth' class='normal'></td>";
+			cell2.innerHTML = "<td><input type='text' name='cname' class='middle'></td>";
+			cell3.innerHTML = "<td><input type='text' name='cpublish' class='middle'></td>";
 			cell4.innerHTML = "<td><input type='text' name='ccontent' class='free'></td>";
 		}
 		
@@ -311,7 +319,7 @@
 			var cell4 = row.insertCell(3);
 			
 			cell1.innerHTML = "<td><input type='month' name='ssimonth'> ~ <input type='month' name='esimonth'></td>";
-			cell2.innerHTML = "<td><input type='text' name='siname' class='medium'></td>";
+			cell2.innerHTML = "<td><input type='text' name='siname' class='normal'></td>";
 			cell3.innerHTML = "<td><input type='text' name='siarea' class='small'></td>";
 			cell4.innerHTML = "<td><input type='text' name='sicontent' class='free'></td>";
 		}

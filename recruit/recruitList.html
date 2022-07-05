@@ -9,6 +9,16 @@
 			background-color: #f5f6f7;
 
 		}
+		ul, li{
+			display: flex;
+			justify-content: center;
+			list-style: none;
+			padding: 18px;
+		}
+		
+		ul > li{
+			cursor: pointer;
+		}
 	
 		table, th, td{
 			border: 1px solid black;
@@ -27,11 +37,12 @@
 		}
 		
 		.button{
-			width: 80px;
-			height: 30px;
-			border: 1px solid black;
-			border-radius: 5px;
+			width: 100px;
+			height: 50px;
+			border: 1px solid #00c850;
 			cursor: pointer;
+			background-color: #00c850;
+			color: white;
 		}
 		
 	</style>
@@ -41,14 +52,14 @@
 <body>
 	<form method="get"action="./recruitView.html" id="list">
 		<center>
-			<img alt="입사지원서" src="./images/logo.png" class="medium"><br>
+			<img alt="입사지원서" src="./images/logo.png" class="middle"><br>
 		</center>
 		<table>
 			<caption style="text-align: left">
 			<strong style="font-size: x-large;">입사지원명단</strong>
 			</caption>
 			<tr>
-				<th><input type="checkbox" name="applicantlist" value="list_all" id="listall" onclick='selectall()'></th>
+				<th><input type="checkbox" name="listall" value="listall" id="listall" onclick="selectall(this);"></th>
 				<th class="small">지원번호</th>
 				<th class="small">지원분야</th>
 				<th class="small">경력구분</th>
@@ -59,9 +70,8 @@
 				<th class="large">email</th>
 				<th class="x-large">주소</th>
 			</tr>
-			<tr style="cursor: pointer" onclick="location.href='recruitView.html'">
-				<a href='recruitView.html' style="cursor:hand;">
-				<td><input type="checkbox" name="applicantlist" value="list_1"></td>
+			<tr onclick="location.href='recruitView.html'" style="cursor: pointer;" >
+				<td onclick="event.cancelBubble=true"><input type="checkbox" name="applicantlist" value="list_1"></td>
 				<td>1</td>
 				<td>백엔드</td>
 				<td>경력</td>
@@ -71,7 +81,6 @@
 				<td>010-1234-5678</td>
 				<td>share@naver.com</td>
 				<td>부산시 동래구 낙민동 중앙하이츠 101동 702호</td>
-				</a>
 			</tr>
 			<tr>
 				<td><input type="checkbox" name="applicantlist" value="list_2"></td>
@@ -122,21 +131,52 @@
 				<td>서울시 종로구 세종대로 175</td>
 			</tr>
 			<caption style="caption-side: bottom;">
-			<div style="float:left;"> 
-				<input type="button" id="buttonreg" class="button" value="등록" onclick="location.href='recruitRegForm.html'"> 
-			</div>
-			<div style="float:right;">
-				<input type="button" id="buttondel" class="button" value="삭제" onclick="listdel();">
-			</div>		
+				<br><br>
+				<div style="float:left;"> 
+					<input type="button" id="buttonreg" class="button" value="등록" onclick="regbutton();"> 
+				</div>
+				<div style="float:right;">
+					<input type="button" id="buttondel" class="button" value="삭제" onclick="listdel();">
+				</div>	
+				<div>
+					<ul>
+						<li onclick="notpage();">&#9664;
+						<li>&nbsp;
+						<li onclick="notpage();">1
+						<li onclick="notpage();">2
+						<li onclick="notpage();">3
+						<li onclick="notpage();">4
+						<li onclick="notpage();">5
+						<li>&nbsp;
+						<li onclick="notpage();">&#9654;
+					</ul>
+				</div>	
 		</caption>
 		</table>
-
+		
 	</form>
 	<script type="text/javascript">
+		function notpage() {
+			alert("페이지가 하나 입니다.");
+		}
+		function regbutton() {
+			alert("등록 페이지로 넘어갑니다.");
+			location.href='recruitRegForm.html';
+		}
 		
 		function listdel() {
 			alert("지원자들의 정보는 삭제할 수 없습니다.");
 		}
+		
+		function selectall(selectall)  {
+		  const checkboxes = document.getElementsByName('applicantlist');
+
+		  checkboxes.forEach((checkbox) => {
+		    checkbox.checked = selectall.checked
+		  })
+		}
+		
+		
 		
 	</script>
 </body>
