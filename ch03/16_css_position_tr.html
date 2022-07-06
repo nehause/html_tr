@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+	<meta charset="UTF-8"> <!-- 문자열을 utf-8로 인식함 -->
+	<meta name = "viewport" content = "width = deivce-width , inital-scale=1.0"> <!-- viewpoint로 너비를 장치에 맞추고 확대 배율은 디폴트 설정에 맞춘다. -->
+	<title>16_css_position_tr</title>
+	<style type="text/css">
+	table, th, td{
+			border-collapse: collapse;
+			text-align:center;
+	}
+	li:hover{
+		font-weight: bolder;
+		text-decoration: underline;
+	}
+	#headermenu{
+		width: 100%;
+		height: 100px;
+		background-color: #f5f6f7;
+		color: white;
+	}
+	
+	#leftmenu {
+		width: 200px;
+		height: 500px;
+		background-color: #03cf5d;
+		float: left;
+	}
+	
+	#mediumtable {
+		background-color: gray;
+		float: left;
+	}
+	.gradient{
+		background-color: linear-gradient(green, aqua);
+	}
+	
+	#underline {
+		width: 100%;
+		height: 100px;
+		background-color: #f5f6f7;
+		clear: both;
+	}
+	
+	</style>
+	<link href="./css/cssExbox.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="headermenu"> </div>
+	<div id="leftmenu">
+		<ul>
+			<li>회원 관리
+			<li>사이트 관리
+			<li>시스템 관리
+			<li>커뮤니케이션 관리
+			<li>템플릿 관리
+			<li>로그 관리
+			<li>통계
+		</ul>
+	</div>
+	<div id="mediumtable">
+		<table>
+			<caption style="text-align: left;">
+			<strong>회원관리</strong>
+			</caption>
+			<tr>
+				<td><input type="checkbox" name="selectall" id="selectall"></td>
+				<td>회원번호</td>
+				<td>이름</td>
+				<td>성별</td>
+				<td>생년월일</td>
+				<td>전화번호</td>
+				<td>이메일</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="underline"> copyright.ezen student</div>
+</body>
+</html>
