@@ -9,7 +9,7 @@
 
 <body>
 	<form name='rgf' method="get"action="./recruitlist.html" id="regform">
-		<center>
+		<center>	
 			<img alt="입사지원서" src="./images/logo.png" onclick="returnlistcheck();" style="cursor: pointer;"><br>
 		</center>
 		<h1>입사지원서</h1>
@@ -194,7 +194,7 @@
 					<input type="text" name="ename" class="normal">
 				</td>
 				<td>
-					<textarea name="econtent" id="content" placeholder="연수과정 및 내용을 적어주세요."></textarea>
+					<textarea name="econtent" id="content" placeholder=""></textarea>
 				</td>
 			</tr>
 		</table>
@@ -273,7 +273,6 @@
 	</form>
 	<script type="text/javascript">
 		function save() {
-			alert("내용이 저장됩니다.");
 			document.getElementById("regform").submit();
 		}
 		
