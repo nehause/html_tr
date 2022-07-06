@@ -9,33 +9,56 @@
 			border-collapse: collapse;
 			text-align:center;
 	}
+	ul, li{
+		
+		box-sizing: border-box;
+		padding: 5px;
+		list-style-type: none;
+	}
 	li:hover{
 		font-weight: bolder;
 		text-decoration: underline;
 	}
 	#headermenu{
+		font-size: x-large;
 		width: 100%;
 		height: 100px;
-		background-color: #f5f6f7;
+		background: linear-gradient(to right, #03cf5d, #48c6db);
 		color: white;
 	}
+	.frontmenu {
+		display: flex;
+		justify-content: left;
+		color: white;
+		list-style-type: none;
+		
+	}
+	
 	
 	#leftmenu {
-		width: 200px;
+		width: 20%;
 		height: 500px;
-		background-color: #03cf5d;
+		background-color: #48c6db;
 		float: left;
 	}
 	
 	#mediumtable {
+		width: 80%;
+		height: 500px;
 		background-color: gray;
 		float: left;
 	}
 	.gradient{
 		background-color: linear-gradient(green, aqua);
 	}
+	#tablemargin{
+		margin-left: auto;
+		margin-right: auto;
+	}
 	
 	#underline {
+		font-weight: bolder;
+		text-align: center;
 		width: 100%;
 		height: 100px;
 		background-color: #f5f6f7;
@@ -47,9 +70,29 @@
 </head>
 
 <body>
-	<div id="headermenu"> </div>
+	<div id="headermenu">
+		<br>
+		<ul class="frontmenu">
+			<li>메일
+			<li>카페
+			<li>블로그
+			<li>지식in
+			<li>쇼핑
+			<li>쇼핑Live
+			<li>Pay
+			<li>Tv
+			<li>사전
+			<li>뉴스
+			<li>증권
+			<li>부동산
+			<li>지도
+			<li>VIBE
+			<li>책
+			<li>웹툰
+		</ul>
+	</div>
 	<div id="leftmenu">
-		<ul>
+		<ul style="line-height: 200%; text-align: left;">
 			<li>회원 관리
 			<li>사이트 관리
 			<li>시스템 관리
@@ -60,23 +103,93 @@
 		</ul>
 	</div>
 	<div id="mediumtable">
-		<table>
+		<table id="tablemargin">
 			<caption style="text-align: left;">
 			<strong>회원관리</strong>
 			</caption>
 			<tr>
-				<td><input type="checkbox" name="selectall" id="selectall"></td>
-				<td>회원번호</td>
-				<td>이름</td>
-				<td>성별</td>
-				<td>생년월일</td>
-				<td>전화번호</td>
-				<td>이메일</td>
+				<td class="small"><input type="checkbox" name="selectall" id="selectall"></td>
+				<td class="small">회원번호</td>
+				<td class="small">이름</td>
+				<td class="small">성별</td>
+				<td class="small">생년월일</td>
+				<td class="small">전화번호</td>
+				<td class="small">이메일</td>
+				<td class="small">회원가입일</td>
 			</tr>
 			<tr>
-				<td>
-				</td>
+				<td><input type="checkbox" name="member" id="member"></td>
+				<td>1</td>
+				<td>xxx</td>
+				<td>xx</td>
+				<td>XXXX-XX-XX</td>
+				<td>XXX-XXXX-XXXX</td>
+				<td>XXXX@XXXXX.XXX</td>
+				<td>XXXX-XX-XX</td>
 			</tr>
+			<tr>
+				<td><input type="checkbox" name="member" id="member"></td>
+				<td>2</td>
+				<td>xxx</td>
+				<td>xx</td>
+				<td>XXXX-XX-XX</td>
+				<td>XXX-XXXX-XXXX</td>
+				<td>XXXX@XXXXX.XXX</td>
+				<td>XXXX-XX-XX</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="member" id="member"></td>
+				<td>3</td>
+				<td>xxx</td>
+				<td>xx</td>
+				<td>XXXX-XX-XX</td>
+				<td>XXX-XXXX-XXXX</td>
+				<td>XXXX@XXXXX.XXX</td>
+				<td>XXXX-XX-XX</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="member" id="member"></td>
+				<td>4</td>
+				<td>xxx</td>
+				<td>xx</td>
+				<td>XXXX-XX-XX</td>
+				<td>XXX-XXXX-XXXX</td>
+				<td>XXXX@XXXXX.XXX</td>
+				<td>XXXX-XX-XX</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="member" id="member"></td>
+				<td>5</td>
+				<td>xxx</td>
+				<td>xx</td>
+				<td>XXXX-XX-XX</td>
+				<td>XXX-XXXX-XXXX</td>
+				<td>XXXX@XXXXX.XXX</td>
+				<td>XXXX-XX-XX</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="member" id="member"></td>
+				<td>6</td>
+				<td>xxx</td>
+				<td>xx</td>
+				<td>XXXX-XX-XX</td>
+				<td>XXX-XXXX-XXXX</td>
+				<td>XXXX@XXXXX.XXX</td>
+				<td>XXXX-XX-XX</td>
+			</tr>
+			<caption style="caption-side: bottom; text-align: center;">
+				<ul style="display: flex;">
+					<li><<
+					<li><
+					<li>1
+					<li>2
+					<li>3
+					<li>4
+					<li>5
+					<li>>
+					<li>>>
+				</ul>
+			</caption>	
 		</table>
 	</div>
 	<div id="underline"> copyright.ezen student</div>
