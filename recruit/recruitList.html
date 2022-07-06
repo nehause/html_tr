@@ -5,10 +5,6 @@
 	<meta name = "viewport" content = "width = deivce-width , inital-scale=1.0"> <!-- viewpoint로 너비를 장치에 맞추고 확대 배율은 디폴트 설정에 맞춘다. -->
 	<title>입사 지원자 명단</title>
 	<style type="text/css">
-		body{
-			background-color: #f5f6f7;
-
-		}
 		ul, li{
 			display: flex;
 			justify-content: center;
@@ -28,7 +24,7 @@
 		}
 		
 		th{
-			background-color: #00c850;
+			background-color: #03cd5d;
 			color: white;
 		}
 		
@@ -39,20 +35,31 @@
 		.button{
 			width: 100px;
 			height: 50px;
-			border: 1px solid #00c850;
+			border: 1px solid #03cd5d;
 			cursor: pointer;
-			background-color: #00c850;
+			background-color: #03cd5d;
 			color: white;
 		}
 		
 	</style>
-	<link href="./css/size.css" rel="stylesheet" type="text/css">
+	<link href="./css/list_form.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+	<center>
+		<a href="https://www.naver.com"><img alt="네이버 마크" src="./images/logo.png"></a>
+		<br><br>
+		<form action="https://search.naver.com/search.naver" method="GET">
+			<div class="search_box">
+				<input name="query" type="text" maxlength="225" autocomplete="off">
+					<i id="keyboard" class="fa fa-keyboard-o"></i>
+				<button>
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</button>
+			</div>
+		</form>
+	</center>
 	<form method="get"action="./recruitView.html" id="list">
-		<center>
-			<a href="https://www.naver.com"><img alt="네이버 마크" src="./images/logo.png"></a><br><br>
-		</center>
 		<table>
 			<caption style="text-align: left">
 				<strong style="font-size: x-large;">입사지원명단</strong>

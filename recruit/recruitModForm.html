@@ -10,7 +10,7 @@
 <body>
 	<form name='rmf' method="get"action="./recruitView.html" id="Modform">
 		<center>
-			<img alt="입사지원서" src="./images/logo.png"><br>
+			<img alt="입사지원서" src="./images/logo.png" onclick="returnlistcheck();" style="cursor: pointer;"><br>
 		</center>
 		<h1>입사지원서</h1>
 		<table>
@@ -278,7 +278,7 @@
 			document.getElementById("Modform").submit();
 		}
 		function returnview() {
-			if (confirm("지금까지 적은 내용은 저장되지 않습니다. 취소합니까?") == true){
+			if (confirm("지금까지 수정된 내용은 저장되지 않습니다. 취소합니까?") == true){
 				 location.href='recruitView.html'
 			 }
 			 else{
@@ -286,7 +286,14 @@
 			 }
 			
 		}
-		
+		function returnlistcheck() {
+			 if (confirm("지금까지 수정된 내용은 저장되지 않습니다. 취소합니까?") == true){
+				 location.href='recruitlist.html'
+			 }
+			 else{
+			     return false;
+			 }
+		}
 		function selemail() {
 			document.rmf.temail.value = document.rmf.seltemail.value;
 			
