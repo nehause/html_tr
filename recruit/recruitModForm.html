@@ -274,8 +274,12 @@
 	</form>
 	<script type="text/javascript">
 		function modsave() {
-			alert("내용이 저장됩니다.");
-			document.getElementById("Modform").submit();
+			if (confirm("저장하시겠습니까?") == true){
+				document.getElementById("Modform").submit();
+			 }
+			 else{
+			     return false;
+			 }
 		}
 		function returnview() {
 			if (confirm("지금까지 수정된 내용은 저장되지 않습니다. 취소합니까?") == true){
