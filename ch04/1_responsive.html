@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+	<meta charset="UTF-8"> <!-- 문자열을 utf-8로 인식함 -->
+	<meta name = "viewport" content = "width = deivce-width , inital-scale=1.0"> <!-- viewpoint로 너비를 장치에 맞추고 확대 배율은 디폴트 설정에 맞춘다. -->
+	<title>1_responsive</title>
+	<style type="text/css">
+		@media screen and (min-width: 1601px) and (max-width: 1920px) {
+			h3, p {
+				color: purple;
+			}
+		}
+	
+		@media screen and (min-width: 1024px) and (max-width: 1600px) {
+			h3, p {
+				color: red;
+			}
+			
+		}
+		
+		@media screen and (min-width: 768px) and (max-width: 1023px) {
+			h3, p {
+				color: orange;
+			}
+		}
+		
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			h3, p {
+				color: yellow;
+			}
+		}
+		
+		@media screen and (max-width: 479px) {
+			h3, p {
+				color: green;
+			}
+		}
+	
+	
+	</style>
+</head>
+
+
+<body>
+	<h3>미디어 쿼리 테스트</h3>
+
+	<p>asdasdadasdasdasdasdsadsadasdasdasdasdasdsadasdasdsadasdasdsadasdasdasasdasdadasdasdasdasdsadsadasdasdasdasdasdsadasdasdsadasdasdsadasdasdasdasdasdsadsadasdasdsad
+		asdasdadasdasdasdasdsadsadasdasdasdasdasdsadasdasdsadasdasdsadasdasdasasdasdadasdasdasdasdsadsadasdasdasdasdasdsadasdasdsadasdasdsadasdasdasdasdasdsadsadasdasdsad</p>
+
+</body>
+</html>
