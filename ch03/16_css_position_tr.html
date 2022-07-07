@@ -33,9 +33,12 @@
 		padding-top:20px;
 	}
 	
+	#wrap {
+			width: 100%;
+	}
+	
 	#headermenu{
 		font-size: x-large;
-		width: 100%;
 		height: 100px;
 		background: linear-gradient(to right, #03cf5d, #48c6db);
 		color: white;
@@ -76,7 +79,6 @@
 	#underline {
 		font-weight: bolder;
 		text-align: center;
-		width: 100%;
 		height: 100px;
 		background-color: #f5f6f7;
 		clear: both;
@@ -87,137 +89,141 @@
 </head>
 
 <body>
-	<div id="headermenu">
-		<br>
-		<ul class="frontmenu">
-			<a herf="#"><li class="menupadding">메일</a>
-			<a herf="#"><li class="menupadding">카페</a>
-			<a herf="#"><li class="menupadding">블로그</a>
-			<a herf="#"><li class="menupadding">지식in</a>
-			<a herf="#"><li class="menupadding">쇼핑</a>
-			<a herf="#"><li class="menupadding">쇼핑Live</a>
-			<a herf="#"><li class="menupadding">Pay</a>
-			<a herf="#"><li class="menupadding">TV</a>
-			<a herf="#"><li class="menupadding">사전</a>
-			<a herf="#"><li class="menupadding">뉴스</a>
-			<a herf="#"><li class="menupadding">증권</a>
-			<a herf="#"><li class="menupadding">부동산</a>
-			<a herf="#"><li class="menupadding">지도</a>
-			<a herf="#"><li class="menupadding">VIBE</a>
-			<a herf="#"><li class="menupadding">책</a>
-			<a herf="#"><li class="menupadding">웹툰</a>
-		</ul>
-	</div>
-	<div id="leftmenu">
-		<ul style="line-height: 200%; text-align: left;">
-			<a herf="#"><li class="leftmenupadding">회원 관리</a>
-				<ul>
-					<a herf="#"><li>로그인 내역</a>
-					<a herf="#"><li>회원 정보 수정</a>
-					<a herf="#"><li>회원 정보 삭제</a>
-				</ul>
-			<a herf="#"><li class="leftmenupadding">사이트 관리</a>
-			<a herf="#"><li class="leftmenupadding">시스템 관리</a>
-			<a herf="#"><li class="leftmenupadding">커뮤니케이션 관리</a>
-			<a herf="#"><li class="leftmenupadding">템플릿 관리</a>
-			<a herf="#"><li class="leftmenupadding">통계</a>
-			<a herf="#"><li class="leftmenupadding">로그 관리</a>
-		</ul>
-	</div>
-	<div id="mediumtable">
-		<table class="tablemargin">
-			<caption style="text-align: left;">
-			<strong>회원관리</strong>
-			</caption>
-			<tr>
-				<td class="small"><input type="checkbox" name="selectall" id="selectall"></td>
-				<td class="small">회원번호</td>
-				<td class="small">이름</td>
-				<td class="small">성별</td>
-				<td class="small">생년월일</td>
-				<td class="small">전화번호</td>
-				<td class="small">이메일</td>
-				<td class="small">회원가입일</td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="member" id="member"></td>
-				<td>1</td>
-				<td>xxx</td>
-				<td>xx</td>
-				<td>XXXX-XX-XX</td>
-				<td>XXX-XXXX-XXXX</td>
-				<td>XXXX@XXXXX.XXX</td>
-				<td>XXXX-XX-XX</td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="member" id="member"></td>
-				<td>2</td>
-				<td>xxx</td>
-				<td>xx</td>
-				<td>XXXX-XX-XX</td>
-				<td>XXX-XXXX-XXXX</td>
-				<td>XXXX@XXXXX.XXX</td>
-				<td>XXXX-XX-XX</td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="member" id="member"></td>
-				<td>3</td>
-				<td>xxx</td>
-				<td>xx</td>
-				<td>XXXX-XX-XX</td>
-				<td>XXX-XXXX-XXXX</td>
-				<td>XXXX@XXXXX.XXX</td>
-				<td>XXXX-XX-XX</td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="member" id="member"></td>
-				<td>4</td>
-				<td>xxx</td>
-				<td>xx</td>
-				<td>XXXX-XX-XX</td>
-				<td>XXX-XXXX-XXXX</td>
-				<td>XXXX@XXXXX.XXX</td>
-				<td>XXXX-XX-XX</td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="member" id="member"></td>
-				<td>5</td>
-				<td>xxx</td>
-				<td>xx</td>
-				<td>XXXX-XX-XX</td>
-				<td>XXX-XXXX-XXXX</td>
-				<td>XXXX@XXXXX.XXX</td>
-				<td>XXXX-XX-XX</td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="member" id="member"></td>
-				<td>6</td>
-				<td>xxx</td>
-				<td>xx</td>
-				<td>XXXX-XX-XX</td>
-				<td>XXX-XXXX-XXXX</td>
-				<td>XXXX@XXXXX.XXX</td>
-				<td>XXXX-XX-XX</td>
-			</tr>	
-		</table>
-		<table class="tablemargin">
-			<caption>
-				<ul style="display: flex;">
-					<li class="menupadding"><<
-					<li class="menupadding"><
-					<li class="menupadding">1
-					<li class="menupadding">2
-					<li class="menupadding">3
-					<li class="menupadding">4
-					<li class="menupadding">5
-					<li class="menupadding">>
-					<li class="menupadding">>>
-				</ul>
-			</caption>
-		</table>
-	</div>
-	<div id="underline">
-	 	<p>copyright.ezen student</p>
- 	</div>
+	<div id=warp>
+		<div id="headermenu">
+			<br>
+			<ul class="frontmenu">
+				<a herf="#"><li class="menupadding">메일</a>
+				<a herf="#"><li class="menupadding">카페</a>
+				<a herf="#"><li class="menupadding">블로그</a>
+				<a herf="#"><li class="menupadding">지식in</a>
+				<a herf="#"><li class="menupadding">쇼핑</a>
+				<a herf="#"><li class="menupadding">쇼핑Live</a>
+				<a herf="#"><li class="menupadding">Pay</a>
+				<a herf="#"><li class="menupadding">TV</a>
+				<a herf="#"><li class="menupadding">사전</a>
+				<a herf="#"><li class="menupadding">뉴스</a>
+				<a herf="#"><li class="menupadding">증권</a>
+				<a herf="#"><li class="menupadding">부동산</a>
+				<a herf="#"><li class="menupadding">지도</a>
+				<a herf="#"><li class="menupadding">VIBE</a>
+				<a herf="#"><li class="menupadding">책</a>
+				<a herf="#"><li class="menupadding">웹툰</a>
+			</ul>
+		</div>
+		<div id="leftmenu">
+			<ul style="line-height: 200%; text-align: left;">
+				<a herf="#">
+					<li class="leftmenupadding">회원 관리
+				</a>
+					<ul>
+						<a herf="#"><li>로그인 내역</a>
+						<a herf="#"><li>회원 정보 수정</a>
+						<a herf="#"><li>회원 정보 삭제</a>
+					</ul>
+				<a herf="#"><li class="leftmenupadding">사이트 관리</a>
+				<a herf="#"><li class="leftmenupadding">시스템 관리</a>
+				<a herf="#"><li class="leftmenupadding">커뮤니케이션 관리</a>
+				<a herf="#"><li class="leftmenupadding">템플릿 관리</a>
+				<a herf="#"><li class="leftmenupadding">통계</a>
+				<a herf="#"><li class="leftmenupadding">로그 관리</a>
+			</ul>
+		</div>
+		<div id="mediumtable">
+			<table class="tablemargin">
+				<caption style="text-align: left;">
+					<strong>회원관리</strong>
+				</caption>
+				<tr>
+					<td class="small"><input type="checkbox" name="selectall" id="selectall"></td>
+					<td class="small">회원번호</td>
+					<td class="small">이름</td>
+					<td class="small">성별</td>
+					<td class="small">생년월일</td>
+					<td class="small">전화번호</td>
+					<td class="small">이메일</td>
+					<td class="small">회원가입일</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="member" id="member"></td>
+					<td>1</td>
+					<td>xxx</td>
+					<td>xx</td>
+					<td>XXXX-XX-XX</td>
+					<td>XXX-XXXX-XXXX</td>
+					<td>XXXX@XXXXX.XXX</td>
+					<td>XXXX-XX-XX</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="member" id="member"></td>
+					<td>2</td>
+					<td>xxx</td>
+					<td>xx</td>
+					<td>XXXX-XX-XX</td>
+					<td>XXX-XXXX-XXXX</td>
+					<td>XXXX@XXXXX.XXX</td>
+					<td>XXXX-XX-XX</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="member" id="member"></td>
+					<td>3</td>
+					<td>xxx</td>
+					<td>xx</td>
+					<td>XXXX-XX-XX</td>
+					<td>XXX-XXXX-XXXX</td>
+					<td>XXXX@XXXXX.XXX</td>
+					<td>XXXX-XX-XX</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="member" id="member"></td>
+					<td>4</td>
+					<td>xxx</td>
+					<td>xx</td>
+					<td>XXXX-XX-XX</td>
+					<td>XXX-XXXX-XXXX</td>
+					<td>XXXX@XXXXX.XXX</td>
+					<td>XXXX-XX-XX</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="member" id="member"></td>
+					<td>5</td>
+					<td>xxx</td>
+					<td>xx</td>
+					<td>XXXX-XX-XX</td>
+					<td>XXX-XXXX-XXXX</td>
+					<td>XXXX@XXXXX.XXX</td>
+					<td>XXXX-XX-XX</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="member" id="member"></td>
+					<td>6</td>
+					<td>xxx</td>
+					<td>xx</td>
+					<td>XXXX-XX-XX</td>
+					<td>XXX-XXXX-XXXX</td>
+					<td>XXXX@XXXXX.XXX</td>
+					<td>XXXX-XX-XX</td>
+				</tr>	
+			</table>
+			<table class="tablemargin">
+				<caption>
+					<ul style="display: flex;">
+						<li class="menupadding"><<
+						<li class="menupadding"><
+						<li class="menupadding">1
+						<li class="menupadding">2
+						<li class="menupadding">3
+						<li class="menupadding">4
+						<li class="menupadding">5
+						<li class="menupadding">>
+						<li class="menupadding">>>
+					</ul>
+				</caption>
+			</table>
+		</div>
+		<div id="underline">
+		 	<p>copyright.ezen student</p>
+	 	</div>
+	 </div>
 </body>
 </html>
