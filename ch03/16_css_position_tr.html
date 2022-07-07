@@ -10,14 +10,14 @@
 			text-align:center;
 	}
 	ul, li{
-		
 		box-sizing: border-box;
-		padding: 5px;
 		list-style-type: none;
 	}
+
 	li:hover{
 		font-weight: bolder;
 		text-decoration: underline;
+		cursor: pointer;
 	}
 	#headermenu{
 		font-size: x-large;
@@ -28,12 +28,17 @@
 	}
 	.frontmenu {
 		display: flex;
+		padding: 10px;
 		justify-content: left;
 		color: white;
 		list-style-type: none;
 		
 	}
-	
+	.menupadding {
+		margin: opx;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 	
 	#leftmenu {
 		width: 20%;
@@ -51,7 +56,7 @@
 	.gradient{
 		background-color: linear-gradient(green, aqua);
 	}
-	#tablemargin{
+	.tablemargin{
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -73,22 +78,22 @@
 	<div id="headermenu">
 		<br>
 		<ul class="frontmenu">
-			<li>메일
-			<li>카페
-			<li>블로그
-			<li>지식in
-			<li>쇼핑
-			<li>쇼핑Live
-			<li>Pay
-			<li>Tv
-			<li>사전
-			<li>뉴스
-			<li>증권
-			<li>부동산
-			<li>지도
-			<li>VIBE
-			<li>책
-			<li>웹툰
+			<li class="menupadding">메일
+			<li class="menupadding">카페
+			<li class="menupadding">블로그
+			<li class="menupadding">지식in
+			<li class="menupadding">쇼핑
+			<li class="menupadding">쇼핑Live
+			<li class="menupadding">Pay
+			<li class="menupadding">TV
+			<li class="menupadding">사전
+			<li class="menupadding">뉴스
+			<li class="menupadding">증권
+			<li class="menupadding">부동산
+			<li class="menupadding">지도
+			<li class="menupadding">VIBE
+			<li class="menupadding">책
+			<li class="menupadding">웹툰
 		</ul>
 	</div>
 	<div id="leftmenu">
@@ -103,7 +108,7 @@
 		</ul>
 	</div>
 	<div id="mediumtable">
-		<table id="tablemargin">
+		<table class="tablemargin">
 			<caption style="text-align: left;">
 			<strong>회원관리</strong>
 			</caption>
@@ -176,20 +181,22 @@
 				<td>XXX-XXXX-XXXX</td>
 				<td>XXXX@XXXXX.XXX</td>
 				<td>XXXX-XX-XX</td>
-			</tr>
-			<caption style="caption-side: bottom; text-align: center;">
+			</tr>	
+		</table>
+		<table class="tablemargin">
+			<caption>
 				<ul style="display: flex;">
-					<li><<
-					<li><
-					<li>1
-					<li>2
-					<li>3
-					<li>4
-					<li>5
-					<li>>
-					<li>>>
+					<li class="menupadding"><<
+					<li class="menupadding"><
+					<li class="menupadding">1
+					<li class="menupadding">2
+					<li class="menupadding">3
+					<li class="menupadding">4
+					<li class="menupadding">5
+					<li class="menupadding">>
+					<li class="menupadding">>>
 				</ul>
-			</caption>	
+			</caption>
 		</table>
 	</div>
 	<div id="underline"> copyright.ezen student</div>
