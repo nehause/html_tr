@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+	<meta charset="UTF-8"> <!-- 문자열을 utf-8로 인식함 -->
+	<meta name = "viewport" content = "width = deivce-width , inital-scale=1.0"> <!-- viewpoint로 너비를 장치에 맞추고 확대 배율은 디폴트 설정에 맞춘다. -->
+	<title>18_css_position5</title>
+		<style type="text/css">
+		#aaa{
+			width: 200px;
+			height: 100px;
+			background-color: red;
+		}
+		#bbb{
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+			
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+		#ccc{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			
+			position: relative;
+			top: 50px;
+			left: 50px;
+		}
+		#ddd{
+			width: 100px;
+			height: 100px;
+			background-color: green;
+
+		}
+		#eee{
+			background-color: blue;
+			position: absolute;
+			top: 300px;
+			left: 300px;
+			
+		}
+	</style>
+</head>
+
+<body>
+	<div id="eee">
+		<div id="aaa">예시1</div>
+		<div id="bbb">예시2</div>
+		<div id="ccc">예시3</div>
+		<div id="ddd">예시4</div>
+	</div>
+
+</body>
+</html>
